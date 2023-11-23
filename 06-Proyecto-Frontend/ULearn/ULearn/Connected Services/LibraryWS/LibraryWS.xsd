@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.web.ulearn/" targetNamespace="http://webservices.web.ulearn/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="anularPrestamo" type="tns:anularPrestamo" />
+  <xs:element name="anularPrestamoResponse" type="tns:anularPrestamoResponse" />
+  <xs:element name="eliminarAutor" type="tns:eliminarAutor" />
+  <xs:element name="eliminarAutorResponse" type="tns:eliminarAutorResponse" />
+  <xs:element name="eliminarBiblioteca" type="tns:eliminarBiblioteca" />
+  <xs:element name="eliminarBibliotecaResponse" type="tns:eliminarBibliotecaResponse" />
+  <xs:element name="eliminarDigital" type="tns:eliminarDigital" />
+  <xs:element name="eliminarDigitalResponse" type="tns:eliminarDigitalResponse" />
+  <xs:element name="eliminarLibro" type="tns:eliminarLibro" />
+  <xs:element name="eliminarLibroResponse" type="tns:eliminarLibroResponse" />
+  <xs:element name="eliminarPrestamo" type="tns:eliminarPrestamo" />
+  <xs:element name="eliminarPrestamoResponse" type="tns:eliminarPrestamoResponse" />
+  <xs:element name="insertarAutor" type="tns:insertarAutor" />
+  <xs:element name="insertarAutorResponse" type="tns:insertarAutorResponse" />
+  <xs:element name="insertarBiblioteca" type="tns:insertarBiblioteca" />
+  <xs:element name="insertarBibliotecaResponse" type="tns:insertarBibliotecaResponse" />
+  <xs:element name="insertarLibro" type="tns:insertarLibro" />
+  <xs:element name="insertarLibroResponse" type="tns:insertarLibroResponse" />
+  <xs:element name="insetarDigital" type="tns:insetarDigital" />
+  <xs:element name="insetarDigitalResponse" type="tns:insetarDigitalResponse" />
+  <xs:element name="listarAutoresPorIdRecurso" type="tns:listarAutoresPorIdRecurso" />
+  <xs:element name="listarAutoresPorIdRecursoResponse" type="tns:listarAutoresPorIdRecursoResponse" />
+  <xs:element name="listarAutoresPorNombre" type="tns:listarAutoresPorNombre" />
+  <xs:element name="listarAutoresPorNombreResponse" type="tns:listarAutoresPorNombreResponse" />
+  <xs:element name="listarBibliotecasIdEncargado" type="tns:listarBibliotecasIdEncargado" />
+  <xs:element name="listarBibliotecasIdEncargadoResponse" type="tns:listarBibliotecasIdEncargadoResponse" />
+  <xs:element name="listarBibliotecasTodas" type="tns:listarBibliotecasTodas" />
+  <xs:element name="listarBibliotecasTodasResponse" type="tns:listarBibliotecasTodasResponse" />
+  <xs:element name="listarDigitalesTodos" type="tns:listarDigitalesTodos" />
+  <xs:element name="listarDigitalesTodosResponse" type="tns:listarDigitalesTodosResponse" />
+  <xs:element name="listarLibrosTodos" type="tns:listarLibrosTodos" />
+  <xs:element name="listarLibrosTodosResponse" type="tns:listarLibrosTodosResponse" />
+  <xs:element name="listarPrestamosConFiltros" type="tns:listarPrestamosConFiltros" />
+  <xs:element name="listarPrestamosConFiltrosResponse" type="tns:listarPrestamosConFiltrosResponse" />
+  <xs:element name="listarPrestamosPorLibro" type="tns:listarPrestamosPorLibro" />
+  <xs:element name="listarPrestamosPorLibroResponse" type="tns:listarPrestamosPorLibroResponse" />
+  <xs:element name="listarRecursosPorTituloAutorConFiltros" type="tns:listarRecursosPorTituloAutorConFiltros" />
+  <xs:element name="listarRecursosPorTituloAutorConFiltrosResponse" type="tns:listarRecursosPorTituloAutorConFiltrosResponse" />
+  <xs:element name="modificarAutor" type="tns:modificarAutor" />
+  <xs:element name="modificarAutorResponse" type="tns:modificarAutorResponse" />
+  <xs:element name="modificarBiblioteca" type="tns:modificarBiblioteca" />
+  <xs:element name="modificarBibliotecaResponse" type="tns:modificarBibliotecaResponse" />
+  <xs:element name="modificarDigital" type="tns:modificarDigital" />
+  <xs:element name="modificarDigitalResponse" type="tns:modificarDigitalResponse" />
+  <xs:element name="modificarLibro" type="tns:modificarLibro" />
+  <xs:element name="modificarLibroResponse" type="tns:modificarLibroResponse" />
+  <xs:element name="modificarPrestamo" type="tns:modificarPrestamo" />
+  <xs:element name="modificarPrestamoResponse" type="tns:modificarPrestamoResponse" />
+  <xs:element name="registrarDevolucionPrestamo" type="tns:registrarDevolucionPrestamo" />
+  <xs:element name="registrarDevolucionPrestamoResponse" type="tns:registrarDevolucionPrestamoResponse" />
+  <xs:element name="registrarPrestamo" type="tns:registrarPrestamo" />
+  <xs:element name="registrarPrestamoResponse" type="tns:registrarPrestamoResponse" />
+  <xs:element name="registrarRetiroPrestamo" type="tns:registrarRetiroPrestamo" />
+  <xs:element name="registrarRetiroPrestamoResponse" type="tns:registrarRetiroPrestamoResponse" />
+  <xs:complexType name="listarPrestamosConFiltros">
+    <xs:sequence>
+      <xs:element name="idBiblioteca" type="xs:int" />
+      <xs:element name="idResponsable" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaInferior" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaSuperior" type="xs:dateTime" />
+      <xs:element name="anulado" type="xs:int" />
+      <xs:element name="devuelto" type="xs:int" />
+      <xs:element name="conRetraso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosConFiltrosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamo">
+    <xs:sequence>
+      <xs:element name="anulado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+      <xs:element minOccurs="0" name="fechaDevolucionConfirmada" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaMaximaDevolucion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaRetiro" type="xs:dateTime" />
+      <xs:element name="idPrestamo" type="xs:int" />
+      <xs:element name="idResponsable" type="xs:int" />
+      <xs:element minOccurs="0" name="libro" type="tns:libro" />
+      <xs:element name="tipoResponsable" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="biblioteca">
+    <xs:sequence>
+      <xs:element name="capacidad" type="xs:int" />
+      <xs:element name="idBiblioteca" type="xs:int" />
+      <xs:element name="idEncargado" type="xs:int" />
+      <xs:element name="idInstitucion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="prestamos" nillable="true" type="tns:prestamo" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recursos" nillable="true" type="tns:recursoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="recursoBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="autores" nillable="true" type="tns:autor" />
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+      <xs:element name="disponible" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaPublicacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ISBN" type="xs:string" />
+      <xs:element name="idRecurso" type="xs:int" />
+      <xs:element name="tipoRecurso" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="autor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="autoria" nillable="true" type="tns:recursoBiblioteca" />
+      <xs:element name="idAutor" type="xs:int" />
+      <xs:element minOccurs="0" name="nacionalidad" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="libro">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:recursoBiblioteca">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element name="nroCopias" type="xs:int" />
+          <xs:element name="nroPaginas" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="eliminarDigital">
+    <xs:sequence>
+      <xs:element name="idDigital" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarDigitalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAutor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autor" type="tns:autor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAutorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="prestamo" type="tns:prestamo" />
+      <xs:element name="diasPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBiblioteca">
+    <xs:sequence>
+      <xs:element name="idBiblioteca" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasIdEncargado">
+    <xs:sequence>
+      <xs:element name="idEncargado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasIdEncargadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAutoresPorIdRecurso">
+    <xs:sequence>
+      <xs:element name="idRecurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAutoresPorIdRecursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:autor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarRetiroPrestamo">
+    <xs:sequence>
+      <xs:element name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarRetiroPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="prestamo" type="tns:prestamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarLibro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="libro" type="tns:libro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarLibroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrestamo">
+    <xs:sequence>
+      <xs:element name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarDigitalesTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarDigitalesTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:digital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="digital">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:recursoBiblioteca">
+        <xs:sequence>
+          <xs:element name="activo" type="xs:boolean" />
+          <xs:element name="descargable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="repositorio" type="xs:string" />
+          <xs:element minOccurs="0" name="URL" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="eliminarAutor">
+    <xs:sequence>
+      <xs:element name="idAutor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAutorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBiblioteca">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biblioteca" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarBibliotecaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAutoresPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAutoresPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:autor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarLibrosTodos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarLibrosTodosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:libro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAutor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autor" type="tns:autor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAutorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosPorLibro">
+    <xs:sequence>
+      <xs:element name="idLibro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPrestamosPorLibroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:prestamo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarLibro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="libro" type="tns:libro" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarLibroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRecursosPorTituloAutorConFiltros">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tituloAutor" type="xs:string" />
+      <xs:element name="disponible" type="xs:int" />
+      <xs:element name="idBiblioteca" type="xs:int" />
+      <xs:element name="tipoRecurso" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarRecursosPorTituloAutorConFiltrosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:recursoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insetarDigital">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="digital" type="tns:digital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insetarDigitalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDigital">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="digital" type="tns:digital" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarDigitalResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarDevolucionPrestamo">
+    <xs:sequence>
+      <xs:element name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarDevolucionPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasTodas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasTodasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:biblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularPrestamo">
+    <xs:sequence>
+      <xs:element name="idPrestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anularPrestamoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarLibro">
+    <xs:sequence>
+      <xs:element name="idLibro" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarLibroResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

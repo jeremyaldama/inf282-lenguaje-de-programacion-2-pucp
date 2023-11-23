@@ -1,0 +1,4 @@
+
+interface IConsultarRecursosBiblioteca{
+	void consultarRecursosBiblioteca();
+}

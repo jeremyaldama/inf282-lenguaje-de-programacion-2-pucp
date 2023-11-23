@@ -1,0 +1,1522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9AE26EF-8B16-49BE-B00C-850FEF58D198}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ULearn</RootNamespace>
+    <AssemblyName>ULearn</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\Estado.cs" />
+    <Compile Include="Administrador\frmBuscarFacultad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarFacultad.Designer.cs">
+      <DependentUpon>frmBuscarFacultad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarSemestre.Designer.cs">
+      <DependentUpon>frmBuscarSemestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaFacultad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaFacultad.Designer.cs">
+      <DependentUpon>frmNuevaFacultad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoSemestre.Designer.cs">
+      <DependentUpon>frmNuevoSemestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmAsuntosAcademicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmAsuntosAcademicos.Designer.cs">
+      <DependentUpon>frmAsuntosAcademicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarAlumno.Designer.cs">
+      <DependentUpon>frmBuscarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarAula.Designer.cs">
+      <DependentUpon>frmBuscarAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarBibliotecario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarBibliotecario.Designer.cs">
+      <DependentUpon>frmBuscarBibliotecario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCarreras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCarreras.Designer.cs">
+      <DependentUpon>frmBuscarCarreras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCharla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCharla.Designer.cs">
+      <DependentUpon>frmBuscarCharla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarCursos.Designer.cs">
+      <DependentUpon>frmBuscarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarDocente.Designer.cs">
+      <DependentUpon>frmBuscarDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarHorarios.Designer.cs">
+      <DependentUpon>frmBuscarHorarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarSala.Designer.cs">
+      <DependentUpon>frmBuscarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmBuscarTaller.Designer.cs">
+      <DependentUpon>frmBuscarTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmLogistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmLogistica.Designer.cs">
+      <DependentUpon>frmLogistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaAula.Designer.cs">
+      <DependentUpon>frmNuevaAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaCarrera.Designer.cs">
+      <DependentUpon>frmNuevaCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaCharla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaCharla.Designer.cs">
+      <DependentUpon>frmNuevaCharla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevaSala.Designer.cs">
+      <DependentUpon>frmNuevaSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoAlumno.Designer.cs">
+      <DependentUpon>frmNuevoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoBibliotecario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoBibliotecario.Designer.cs">
+      <DependentUpon>frmNuevoBibliotecario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoCurso.Designer.cs">
+      <DependentUpon>frmNuevoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoDocente.Designer.cs">
+      <DependentUpon>frmNuevoDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoEspacio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoEspacio.Designer.cs">
+      <DependentUpon>frmNuevoEspacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoEvento.Designer.cs">
+      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoHorario.Designer.cs">
+      <DependentUpon>frmNuevoHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\frmNuevoTaller.Designer.cs">
+      <DependentUpon>frmNuevoTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\Estado.cs" />
+    <Compile Include="Alumno\frmBusquedaCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmBusquedaCursos.Designer.cs">
+      <DependentUpon>frmBusquedaCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmCharla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmCharla.Designer.cs">
+      <DependentUpon>frmCharla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmDatosCursoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmDatosCursoAlumno.Designer.cs">
+      <DependentUpon>frmDatosCursoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmDetalleReclamoAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmDetalleReclamoAlumno.Designer.cs">
+      <DependentUpon>frmDetalleReclamoAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmBuscarCursosPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmBuscarCursosPersonas.Designer.cs">
+      <DependentUpon>frmBuscarCursosPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmDatosCursosXSemestre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmDatosCursosXSemestre.Designer.cs">
+      <DependentUpon>frmDatosCursosXSemestre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmEventos.Designer.cs">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmHistorialAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmHistorialAcademico.Designer.cs">
+      <DependentUpon>frmHistorialAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmReclamoDetalleAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmReclamoDetalleAlumno.Designer.cs">
+      <DependentUpon>frmReclamoDetalleAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmReclamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmReclamos.Designer.cs">
+      <DependentUpon>frmReclamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmRegistrarReclamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmRegistrarReclamo.Designer.cs">
+      <DependentUpon>frmRegistrarReclamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmReporteHistorialAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmReporteHistorialAcademico.Designer.cs">
+      <DependentUpon>frmReporteHistorialAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumno\frmTaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno\frmTaller.Designer.cs">
+      <DependentUpon>frmTaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\Estado.cs" />
+    <Compile Include="Bibliotecario\frmAutoresLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmAutoresLibro.Designer.cs">
+      <DependentUpon>frmAutoresLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaDeAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaDeAutor.Designer.cs">
+      <DependentUpon>frmBusquedaDeAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaDeRecursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaDeRecursos.Designer.cs">
+      <DependentUpon>frmBusquedaDeRecursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaPrestamos.Designer.cs">
+      <DependentUpon>frmBusquedaPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaUsuariosPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmBusquedaUsuariosPrestamo.Designer.cs">
+      <DependentUpon>frmBusquedaUsuariosPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmDetallesPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmDetallesPrestamo.Designer.cs">
+      <DependentUpon>frmDetallesPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmFiltros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmFiltros.Designer.cs">
+      <DependentUpon>frmFiltros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmGestionLibrosRecursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmGestionLibrosRecursos.Designer.cs">
+      <DependentUpon>frmGestionLibrosRecursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoAutor.Designer.cs">
+      <DependentUpon>frmNuevoAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoDigital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoDigital.Designer.cs">
+      <DependentUpon>frmNuevoDigital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoLibro.Designer.cs">
+      <DependentUpon>frmNuevoLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoRecurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmNuevoRecurso.Designer.cs">
+      <DependentUpon>frmNuevoRecurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReporteGenerado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReporteGenerado.designer.cs">
+      <DependentUpon>frmReporteGenerado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportePrestamosActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportePrestamosActivos.designer.cs">
+      <DependentUpon>frmReportePrestamosActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportePrestamosFinalizados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportePrestamosFinalizados.designer.cs">
+      <DependentUpon>frmReportePrestamosFinalizados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bibliotecario\frmReportes.designer.cs">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LibraryWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LogisticsWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ReportesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\ServiciosAcademicos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StaffWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\Estado.cs" />
+    <Compile Include="Docente\frmAlumnosCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmAlumnosCurso.Designer.cs">
+      <DependentUpon>frmAlumnosCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmBiblioteca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmBiblioteca.designer.cs">
+      <DependentUpon>frmBiblioteca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmBuscarPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmBuscarPersonas.Designer.cs">
+      <DependentUpon>frmBuscarPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmBusquedaDeRecursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmBusquedaDeRecursos.designer.cs">
+      <DependentUpon>frmBusquedaDeRecursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDatosAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDatosAlumno.Designer.cs">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDatosCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDatosCurso.Designer.cs">
+      <DependentUpon>frmDatosCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDatosPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDatosPersona.Designer.cs">
+      <DependentUpon>frmDatosPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDatosPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDatosPrestamos.Designer.cs">
+      <DependentUpon>frmDatosPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDetalleCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDetalleCurso.Designer.cs">
+      <DependentUpon>frmDetalleCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDetallePersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDetallePersona.Designer.cs">
+      <DependentUpon>frmDetallePersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDetalleReclamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDetalleReclamo.Designer.cs">
+      <DependentUpon>frmDetalleReclamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmDetalleRecurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmDetalleRecurso.designer.cs">
+      <DependentUpon>frmDetalleRecurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmEstadisticasCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmEstadisticasCurso.Designer.cs">
+      <DependentUpon>frmEstadisticasCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmEventos.Designer.cs">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmHorario.Designer.cs">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmInfoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmInfoEvento.Designer.cs">
+      <DependentUpon>frmInfoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmMisPrestamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmMisPrestamos.Designer.cs">
+      <DependentUpon>frmMisPrestamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmNotas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmNotas.Designer.cs">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmReclamoPorAtender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmReclamoPorAtender.Designer.cs">
+      <DependentUpon>frmReclamoPorAtender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmReclamos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmReclamos.Designer.cs">
+      <DependentUpon>frmReclamos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmRegistroPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmRegistroPrestamo.designer.cs">
+      <DependentUpon>frmRegistroPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmRegNota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmRegNota.Designer.cs">
+      <DependentUpon>frmRegNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmReporteCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmReporteCurso.Designer.cs">
+      <DependentUpon>frmReporteCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Docente\frmResumenDatosRecurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Docente\frmResumenDatosRecurso.designer.cs">
+      <DependentUpon>frmResumenDatosRecurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusquedaEvaluacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusquedaEvaluacion.Designer.cs">
+      <DependentUpon>frmBusquedaEvaluacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioSesion.Designer.cs">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Administrador\frmBuscarFacultad.resx">
+      <DependentUpon>frmBuscarFacultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmBuscarSemestre.resx">
+      <DependentUpon>frmBuscarSemestre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmLogistica.resx">
+      <DependentUpon>frmLogistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmNuevaFacultad.resx">
+      <DependentUpon>frmNuevaFacultad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmNuevoEspacio.resx">
+      <DependentUpon>frmNuevoEspacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmNuevoEvento.resx">
+      <DependentUpon>frmNuevoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmNuevoHorario.resx">
+      <DependentUpon>frmNuevoHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmNuevoSemestre.resx">
+      <DependentUpon>frmNuevoSemestre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmBusquedaCursos.resx">
+      <DependentUpon>frmBusquedaCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmCharla.resx">
+      <DependentUpon>frmCharla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmDatosCursoAlumno.resx">
+      <DependentUpon>frmDatosCursoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmDatosCursosXSemestre.resx">
+      <DependentUpon>frmDatosCursosXSemestre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmDetalleReclamoAlumno.resx">
+      <DependentUpon>frmDetalleReclamoAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmEventos.resx">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmHistorialAcademico.resx">
+      <DependentUpon>frmHistorialAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmBuscarCursosPersonas.resx">
+      <DependentUpon>frmBuscarCursosPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmReclamoDetalleAlumno.resx">
+      <DependentUpon>frmReclamoDetalleAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmReclamos.resx">
+      <DependentUpon>frmReclamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmRegistrarReclamo.resx">
+      <DependentUpon>frmRegistrarReclamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmReporteHistorialAcademico.resx">
+      <DependentUpon>frmReporteHistorialAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumno\frmTaller.resx">
+      <DependentUpon>frmTaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmAutoresLibro.resx">
+      <DependentUpon>frmAutoresLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmBusquedaDeAutor.resx">
+      <DependentUpon>frmBusquedaDeAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmBusquedaDeRecursos.resx">
+      <DependentUpon>frmBusquedaDeRecursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmBusquedaPrestamos.resx">
+      <DependentUpon>frmBusquedaPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmBusquedaUsuariosPrestamo.resx">
+      <DependentUpon>frmBusquedaUsuariosPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmDetallesPrestamo.resx">
+      <DependentUpon>frmDetallesPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmFiltros.resx">
+      <DependentUpon>frmFiltros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmGestionLibrosRecursos.resx">
+      <DependentUpon>frmGestionLibrosRecursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmNuevoAutor.resx">
+      <DependentUpon>frmNuevoAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmNuevoDigital.resx">
+      <DependentUpon>frmNuevoDigital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmNuevoLibro.resx">
+      <DependentUpon>frmNuevoLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmNuevoRecurso.resx">
+      <DependentUpon>frmNuevoRecurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmReporteGenerado.resx">
+      <DependentUpon>frmReporteGenerado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmReportePrestamosActivos.resx">
+      <DependentUpon>frmReportePrestamosActivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmReportePrestamosFinalizados.resx">
+      <DependentUpon>frmReportePrestamosFinalizados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bibliotecario\frmReportes.resx">
+      <DependentUpon>frmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmAlumnosCurso.resx">
+      <DependentUpon>frmAlumnosCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmBiblioteca.resx">
+      <DependentUpon>frmBiblioteca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmBuscarPersonas.resx">
+      <DependentUpon>frmBuscarPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmBusquedaDeRecursos.resx">
+      <DependentUpon>frmBusquedaDeRecursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDatosAlumno.resx">
+      <DependentUpon>frmDatosAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDatosCurso.resx">
+      <DependentUpon>frmDatosCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDatosPersona.resx">
+      <DependentUpon>frmDatosPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDatosPrestamos.resx">
+      <DependentUpon>frmDatosPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDetalleCurso.resx">
+      <DependentUpon>frmDetalleCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDetallePersona.resx">
+      <DependentUpon>frmDetallePersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDetalleReclamo.resx">
+      <DependentUpon>frmDetalleReclamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmDetalleRecurso.resx">
+      <DependentUpon>frmDetalleRecurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmEstadisticasCurso.resx">
+      <DependentUpon>frmEstadisticasCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmEventos.resx">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmHorario.resx">
+      <DependentUpon>frmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmInfoEvento.resx">
+      <DependentUpon>frmInfoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmMisPrestamos.resx">
+      <DependentUpon>frmMisPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmNotas.resx">
+      <DependentUpon>frmNotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmReclamoPorAtender.resx">
+      <DependentUpon>frmReclamoPorAtender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmReclamos.resx">
+      <DependentUpon>frmReclamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmRegistroPrestamo.resx">
+      <DependentUpon>frmRegistroPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmRegNota.resx">
+      <DependentUpon>frmRegNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmReporteCurso.resx">
+      <DependentUpon>frmReporteCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Docente\frmResumenDatosRecurso.resx">
+      <DependentUpon>frmResumenDatosRecurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusquedaEvaluacion.resx">
+      <DependentUpon>frmBusquedaEvaluacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioSesion.resx">
+      <DependentUpon>frmInicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Connected Services\LibraryWS\LibraryWS.wsdl" />
+    <None Include="Connected Services\LibraryWS\LibraryWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.anularPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.autor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.biblioteca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.digital.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.eliminarAutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.eliminarBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.eliminarDigitalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.eliminarLibroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.eliminarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.insertarAutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.insertarBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.insertarLibroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.insetarDigitalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.libro.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarAutoresPorIdRecursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarAutoresPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarBibliotecasIdEncargadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarBibliotecasTodasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarDigitalesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarLibrosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarPrestamosConFiltrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarPrestamosPorLibroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.listarRecursosPorTituloAutorConFiltrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.modificarAutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.modificarBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.modificarDigitalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.modificarLibroResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.modificarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.prestamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.recursoBiblioteca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.registrarDevolucionPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.registrarPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LibraryWS\ULearn.LibraryWS.registrarRetiroPrestamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\LogisticsWS.wsdl" />
+    <None Include="Connected Services\LogisticsWs\LogisticsWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.aula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.charla.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarCharlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarFacultadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarInstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarSalaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.eliminarTallerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.facultad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.inscribirseCharlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.inscribirseTallerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarCharlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarFacultadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarInstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarSalaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.insertarTallerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.institucion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listaCharlasFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTalleresFechaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodasAulasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodasCharlasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodasFacultadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodasInstitucionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodasSalasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.listarTodosTalleresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarAulaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarCharlaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarFacultadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarInstitucionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarSalaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.modificarTallerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.sala.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LogisticsWs\ULearn.LogisticsWs.taller.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReportesWS\ReportesWS.wsdl" />
+    <None Include="Connected Services\ReportesWS\ReportesWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ReportesWS\ULearn.ReportesWS.generarReporteHistorialAcademicoAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReportesWS\ULearn.ReportesWS.generarReporteHorarioCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ReportesWS\ULearn.ReportesWS.generarReportePrestamosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\AcademicsWS.wsdl" />
+    <None Include="Connected Services\ServiciosAcademicos\AcademicsWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\AcademicsWS1.wsdl" />
+    <None Include="Connected Services\ServiciosAcademicos\AcademicsWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarAlumnoPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarContrasenhaDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarContrasenhaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarCorreoDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarDocentePerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarTipoDocentePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.actualizarUsuarioDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.agregarAlumnoAHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.agregarCursoASemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.agregarDocenteAHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.alumno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.carrera.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.curso.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.cursoXAlumnoXSemestre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.docente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarCarreraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarDocentePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.eliminarSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.evaluacion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.hallarAlumnoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.hallarDocentePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.hallarTotalizadosHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.horario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarCarreraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.insertarSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarAlumnosDeHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarAlumnosXCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarCarrerasPorFacultadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarCASSPorAlumnoSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarCursosAlumnoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarCursosCodigoNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarCursosDocentePorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarDocentesDeHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarDocentesPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarDocentesTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarEvaluacionPorCursoSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarEvaluacionxAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarHorariosPorAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarHorariosPorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarHorariosPorDocenteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarHorariosTodosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarReclamoPorAlumnoSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarReclamoPorCursoSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarSemestresPorAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarTodasCarrerasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarTodosCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.listarTodosSemestresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.modificarCarreraResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.modificarEvaluacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.modificarHorarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.modificarReclamoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.modificarSemestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.reclamo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiciosAcademicos\ULearn.ServiciosAcademicos.semestre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\StaffWS.wsdl" />
+    <None Include="Connected Services\StaffWS\StaffWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StaffWS\StaffWS1.wsdl" />
+    <None Include="Connected Services\StaffWS\StaffWS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.actualizarEncargadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.buscarFotoPerfilResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.eliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.eliminarEncargadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.encargadoBiblioteca.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.hallarAdministradorPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.hallarEncargadoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.iniciarSesionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.insertarEncargadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.listarEncargadosXUsuarioNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.listarTodosAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.listarTodosEncargadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\StaffWS\ULearn.StaffWS.usuarioSesion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\billboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookshelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historialAcademico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mentoring.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prestamos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reclamo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\request.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\satisfaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spreadsheet-app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\support.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\school%281%29.png" />
+    <None Include="Resources\school.png" />
+    <None Include="Resources\editor %281%29.png" />
+    <None Include="Resources\library.png" />
+    <None Include="Resources\book %281%291.png" />
+    <None Include="Resources\book %281%29.png" />
+    <None Include="Resources\wait.png" />
+    <None Include="Resources\select.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\return-goods.png" />
+    <None Include="Resources\task.png" />
+    <None Include="Resources\hourglass.png" />
+    <None Include="Resources\Upload.png" />
+    <None Include="Resources\conferencia-en-linea100.png" />
+    <None Include="Resources\taller100.png" />
+    <None Include="Resources\sala.png" />
+    <None Include="Resources\aula.png" />
+    <None Include="Connected Services\ServiciosAcademicos\configuration91.svcinfo" />
+    <None Include="Connected Services\ServiciosAcademicos\configuration.svcinfo" />
+    <None Include="Connected Services\ServiciosAcademicos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\StaffWS\configuration91.svcinfo" />
+    <None Include="Connected Services\StaffWS\configuration.svcinfo" />
+    <None Include="Connected Services\StaffWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\LogisticsWs\configuration91.svcinfo" />
+    <None Include="Connected Services\LogisticsWs\configuration.svcinfo" />
+    <None Include="Connected Services\LogisticsWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\LibraryWS\configuration91.svcinfo" />
+    <None Include="Connected Services\LibraryWS\configuration.svcinfo" />
+    <None Include="Connected Services\LibraryWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\ReportesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\ReportesWS\configuration.svcinfo" />
+    <None Include="Connected Services\ReportesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\academic1.png" />
+    <None Include="Resources\time-left.png" />
+    <None Include="Resources\clipboard.png" />
+    <None Include="Resources\transfer.png" />
+    <None Include="Resources\book1.png" />
+    <None Include="Resources\conferencia-en-linea.png" />
+    <None Include="Resources\formacion %281%29.png" />
+    <None Include="Resources\formacion.png" />
+    <None Include="Resources\calendario %281%29.png" />
+    <None Include="Resources\logo-u_learn.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\salon.png" />
+    <None Include="Resources\pizarra1.png" />
+    <None Include="Resources\pizarra.png" />
+    <None Include="Resources\new-document.png" />
+    <None Include="Resources\horarios1.png" />
+    <None Include="Resources\horarios.png" />
+    <None Include="Resources\gestion-de-equipos.png" />
+    <None Include="Resources\evento45.png" />
+    <None Include="Resources\evento.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\cursos1.png" />
+    <None Include="Resources\cursos.png" />
+    <None Include="Resources\carreras1.png" />
+    <None Include="Resources\carreras.png" />
+    <None Include="Resources\bookshelf1.png" />
+    <None Include="Resources\billboard45.png" />
+    <None Include="Resources\billboard1.png" />
+    <None Include="Resources\bibliotecade45.png" />
+    <None Include="Resources\biblioteca45.png" />
+    <None Include="Resources\biblioteca32.png" />
+    <None Include="Resources\biblioteca.png" />
+    <None Include="Resources\arrow1.png" />
+    <None Include="Resources\alumnos_icono11.png" />
+    <None Include="Resources\alumnos_icono2.png" />
+    <None Include="Resources\alumnos1.png" />
+    <None Include="Resources\academic451.png" />
+    <None Include="Resources\academic11.png" />
+    <Content Include="Resources\academic45.png" />
+    <None Include="Resources\alert.png" />
+    <Content Include="Resources\alumnos.png" />
+    <Content Include="Resources\alumnos_icono.png" />
+    <Content Include="Resources\alumnos_icono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\LibraryWS\" />
+    <WCFMetadataStorage Include="Connected Services\LogisticsWs\" />
+    <WCFMetadataStorage Include="Connected Services\ReportesWS\" />
+    <WCFMetadataStorage Include="Connected Services\ServiciosAcademicos\" />
+    <WCFMetadataStorage Include="Connected Services\StaffWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

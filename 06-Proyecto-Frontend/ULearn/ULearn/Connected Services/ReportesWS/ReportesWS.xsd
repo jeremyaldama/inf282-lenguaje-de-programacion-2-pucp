@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.web.ulearn/" targetNamespace="http://webservices.web.ulearn/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="generarReporteHistorialAcademicoAlumno" type="tns:generarReporteHistorialAcademicoAlumno" />
+  <xs:element name="generarReporteHistorialAcademicoAlumnoResponse" type="tns:generarReporteHistorialAcademicoAlumnoResponse" />
+  <xs:element name="generarReporteHorarioCurso" type="tns:generarReporteHorarioCurso" />
+  <xs:element name="generarReporteHorarioCursoResponse" type="tns:generarReporteHorarioCursoResponse" />
+  <xs:element name="generarReportePrestamos" type="tns:generarReportePrestamos" />
+  <xs:element name="generarReportePrestamosResponse" type="tns:generarReportePrestamosResponse" />
+  <xs:complexType name="generarReporteHorarioCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="horario" type="tns:horario" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="horario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="alumnos" nillable="true" type="tns:alumno" />
+      <xs:element name="aprobados" type="xs:int" />
+      <xs:element minOccurs="0" name="codigo" type="xs:string" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="dia" type="tns:diaSemana" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="docentes" nillable="true" type="tns:docente" />
+      <xs:element minOccurs="0" name="horaFin" type="xs:string" />
+      <xs:element minOccurs="0" name="horaInicio" type="xs:string" />
+      <xs:element name="idHorario" type="xs:int" />
+      <xs:element name="matriculados" type="xs:int" />
+      <xs:element name="media" type="xs:double" />
+      <xs:element name="tiempoTolerancia" type="xs:int" />
+      <xs:element name="tipoHorario" type="xs:unsignedShort" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="alumno">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="carrera" type="tns:carrera" />
+          <xs:element name="codAlumno" type="xs:int" />
+          <xs:element minOccurs="0" name="codigoAlumno" type="xs:string" />
+          <xs:element name="creditosTotal" type="xs:double" />
+          <xs:element name="cursosTotal" type="xs:int" />
+          <xs:element name="esDeudor" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="evaluaciones" nillable="true" type="tns:evaluacion" />
+          <xs:element minOccurs="0" name="historialAcademico" type="tns:historialAcademico" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="horariosInscritos" nillable="true" type="tns:horario" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correoElectronico" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="salt" type="xs:string" />
+      <xs:element name="sexo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element name="tipoUsuario" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="carrera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cambioMalla" type="xs:dateTime" />
+      <xs:element name="creditos" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="cursos" nillable="true" type="tns:curso" />
+      <xs:element name="cursosTotales" type="xs:int" />
+      <xs:element name="esAcreditada" type="xs:boolean" />
+      <xs:element minOccurs="0" name="facultad" type="tns:facultad" />
+      <xs:element name="idCarrera" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codCurso" type="xs:string" />
+      <xs:element name="creditos" type="xs:double" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="docentes" nillable="true" type="tns:docente" />
+      <xs:element name="esElectivo" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="evaluaciones" nillable="true" type="tns:evaluacion" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="horarios" nillable="true" type="tns:horario" />
+      <xs:element name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="semestreDictado" type="tns:semestre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="docente">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cursosDictar" nillable="true" type="tns:curso" />
+          <xs:element name="esDeudor" type="xs:int" />
+          <xs:element minOccurs="0" name="facultad" type="tns:facultad" />
+          <xs:element minOccurs="0" name="gradoAcademico" type="xs:string" />
+          <xs:element minOccurs="0" name="intereses" type="xs:string" />
+          <xs:element minOccurs="0" name="oficina" type="xs:string" />
+          <xs:element minOccurs="0" name="tipoDocente" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="empleado" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fechaContratacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="horaEntrada" type="xs:string" />
+          <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+          <xs:element name="idEmpleado" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="facultad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anexo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="carreras" nillable="true" type="tns:carrera" />
+      <xs:element name="idFacultad" type="xs:int" />
+      <xs:element name="inscritos" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="evaluacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element name="asistio" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element name="idEvaluacion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreEvaluacion" type="tns:nombreEvaluacion" />
+      <xs:element name="nota" type="xs:double" />
+      <xs:element minOccurs="0" name="reclamo" type="tns:reclamo" />
+      <xs:element minOccurs="0" name="semestre" type="tns:semestre" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reclamo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="evaluacion" type="tns:evaluacion" />
+      <xs:element minOccurs="0" name="fechaReclamo" type="xs:dateTime" />
+      <xs:element name="idReclamo" type="xs:int" />
+      <xs:element minOccurs="0" name="respuesta" type="xs:string" />
+      <xs:element name="valido" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="semestre">
+    <xs:sequence>
+      <xs:element name="esRegular" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idSemestre" type="xs:int" />
+      <xs:element minOccurs="0" name="semestre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="historialAcademico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element name="cantCredAprob" type="xs:double" />
+      <xs:element name="cantCredTotal" type="xs:double" />
+      <xs:element name="cantCurAprobados" type="xs:int" />
+      <xs:element name="cantCurTotal" type="xs:int" />
+      <xs:element name="nivelAcademico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteHorarioCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteHistorialAcademicoAlumno">
+    <xs:sequence>
+      <xs:element name="idAlumno" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReporteHistorialAcademicoAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePrestamos">
+    <xs:sequence>
+      <xs:element name="modo" type="xs:int" />
+      <xs:element name="idBiblioteca" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarReportePrestamosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nombreEvaluacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PC1" />
+      <xs:enumeration value="PC2" />
+      <xs:enumeration value="PC3" />
+      <xs:enumeration value="PC4" />
+      <xs:enumeration value="EX1" />
+      <xs:enumeration value="EX2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="diaSemana">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Lunes" />
+      <xs:enumeration value="Martes" />
+      <xs:enumeration value="Miercoles" />
+      <xs:enumeration value="Jueves" />
+      <xs:enumeration value="Viernes" />
+      <xs:enumeration value="Sabado" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

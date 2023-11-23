@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.web.ulearn/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ReportesWS" targetNamespace="http://webservices.web.ulearn/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ULearnWS/ReportesWS?xsd=1" namespace="http://webservices.web.ulearn/" />
+    </xsd:schema>
+  </types>
+  <message name="generarReporteHorarioCurso">
+    <part name="parameters" element="tns:generarReporteHorarioCurso" />
+  </message>
+  <message name="generarReporteHorarioCursoResponse">
+    <part name="parameters" element="tns:generarReporteHorarioCursoResponse" />
+  </message>
+  <message name="generarReportePrestamos">
+    <part name="parameters" element="tns:generarReportePrestamos" />
+  </message>
+  <message name="generarReportePrestamosResponse">
+    <part name="parameters" element="tns:generarReportePrestamosResponse" />
+  </message>
+  <message name="generarReporteHistorialAcademicoAlumno">
+    <part name="parameters" element="tns:generarReporteHistorialAcademicoAlumno" />
+  </message>
+  <message name="generarReporteHistorialAcademicoAlumnoResponse">
+    <part name="parameters" element="tns:generarReporteHistorialAcademicoAlumnoResponse" />
+  </message>
+  <portType name="ReportesWS">
+    <operation name="generarReporteHorarioCurso">
+      <input wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReporteHorarioCursoRequest" message="tns:generarReporteHorarioCurso" />
+      <output wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReporteHorarioCursoResponse" message="tns:generarReporteHorarioCursoResponse" />
+    </operation>
+    <operation name="generarReportePrestamos">
+      <input wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReportePrestamosRequest" message="tns:generarReportePrestamos" />
+      <output wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReportePrestamosResponse" message="tns:generarReportePrestamosResponse" />
+    </operation>
+    <operation name="generarReporteHistorialAcademicoAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReporteHistorialAcademicoAlumnoRequest" message="tns:generarReporteHistorialAcademicoAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/ReportesWS/generarReporteHistorialAcademicoAlumnoResponse" message="tns:generarReporteHistorialAcademicoAlumnoResponse" />
+    </operation>
+  </portType>
+  <binding name="ReportesWSPortBinding" type="tns:ReportesWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="generarReporteHorarioCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReportePrestamos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="generarReporteHistorialAcademicoAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReportesWS">
+    <port name="ReportesWSPort" binding="tns:ReportesWSPortBinding">
+      <soap:address location="http://localhost:8080/ULearnWS/ReportesWS" />
+    </port>
+  </service>
+</definitions>

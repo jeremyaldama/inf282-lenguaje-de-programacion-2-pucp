@@ -1,0 +1,5 @@
+
+enum TipoReclamo {
+    ErrorSuma, 
+	Explicacion
+}

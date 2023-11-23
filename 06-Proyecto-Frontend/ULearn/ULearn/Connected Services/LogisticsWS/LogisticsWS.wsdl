@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.web.ulearn/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="LogisticsWS" targetNamespace="http://webservices.web.ulearn/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ULearnWS/LogisticsWS?xsd=1" namespace="http://webservices.web.ulearn/" />
+    </xsd:schema>
+  </types>
+  <message name="modificarFacultad">
+    <part name="parameters" element="tns:modificarFacultad" />
+  </message>
+  <message name="modificarFacultadResponse">
+    <part name="parameters" element="tns:modificarFacultadResponse" />
+  </message>
+  <message name="listarTodasCharlas">
+    <part name="parameters" element="tns:listarTodasCharlas" />
+  </message>
+  <message name="listarTodasCharlasResponse">
+    <part name="parameters" element="tns:listarTodasCharlasResponse" />
+  </message>
+  <message name="listarTodasFacultades">
+    <part name="parameters" element="tns:listarTodasFacultades" />
+  </message>
+  <message name="listarTodasFacultadesResponse">
+    <part name="parameters" element="tns:listarTodasFacultadesResponse" />
+  </message>
+  <message name="listarTodasInstituciones">
+    <part name="parameters" element="tns:listarTodasInstituciones" />
+  </message>
+  <message name="listarTodasInstitucionesResponse">
+    <part name="parameters" element="tns:listarTodasInstitucionesResponse" />
+  </message>
+  <message name="listaCharlasFecha">
+    <part name="parameters" element="tns:listaCharlasFecha" />
+  </message>
+  <message name="listaCharlasFechaResponse">
+    <part name="parameters" element="tns:listaCharlasFechaResponse" />
+  </message>
+  <message name="insertarInstitucion">
+    <part name="parameters" element="tns:insertarInstitucion" />
+  </message>
+  <message name="insertarInstitucionResponse">
+    <part name="parameters" element="tns:insertarInstitucionResponse" />
+  </message>
+  <message name="inscribirseTaller">
+    <part name="parameters" element="tns:inscribirseTaller" />
+  </message>
+  <message name="inscribirseTallerResponse">
+    <part name="parameters" element="tns:inscribirseTallerResponse" />
+  </message>
+  <message name="modificarInstitucion">
+    <part name="parameters" element="tns:modificarInstitucion" />
+  </message>
+  <message name="modificarInstitucionResponse">
+    <part name="parameters" element="tns:modificarInstitucionResponse" />
+  </message>
+  <message name="eliminarInstitucion">
+    <part name="parameters" element="tns:eliminarInstitucion" />
+  </message>
+  <message name="eliminarInstitucionResponse">
+    <part name="parameters" element="tns:eliminarInstitucionResponse" />
+  </message>
+  <message name="inscribirseCharla">
+    <part name="parameters" element="tns:inscribirseCharla" />
+  </message>
+  <message name="inscribirseCharlaResponse">
+    <part name="parameters" element="tns:inscribirseCharlaResponse" />
+  </message>
+  <message name="listarTalleresFecha">
+    <part name="parameters" element="tns:listarTalleresFecha" />
+  </message>
+  <message name="listarTalleresFechaResponse">
+    <part name="parameters" element="tns:listarTalleresFechaResponse" />
+  </message>
+  <message name="listarTodosTalleres">
+    <part name="parameters" element="tns:listarTodosTalleres" />
+  </message>
+  <message name="listarTodosTalleresResponse">
+    <part name="parameters" element="tns:listarTodosTalleresResponse" />
+  </message>
+  <message name="eliminarCharla">
+    <part name="parameters" element="tns:eliminarCharla" />
+  </message>
+  <message name="eliminarCharlaResponse">
+    <part name="parameters" element="tns:eliminarCharlaResponse" />
+  </message>
+  <message name="eliminarSala">
+    <part name="parameters" element="tns:eliminarSala" />
+  </message>
+  <message name="eliminarSalaResponse">
+    <part name="parameters" element="tns:eliminarSalaResponse" />
+  </message>
+  <message name="eliminarTaller">
+    <part name="parameters" element="tns:eliminarTaller" />
+  </message>
+  <message name="eliminarTallerResponse">
+    <part name="parameters" element="tns:eliminarTallerResponse" />
+  </message>
+  <message name="eliminarAula">
+    <part name="parameters" element="tns:eliminarAula" />
+  </message>
+  <message name="eliminarAulaResponse">
+    <part name="parameters" element="tns:eliminarAulaResponse" />
+  </message>
+  <message name="insertarFacultad">
+    <part name="parameters" element="tns:insertarFacultad" />
+  </message>
+  <message name="insertarFacultadResponse">
+    <part name="parameters" element="tns:insertarFacultadResponse" />
+  </message>
+  <message name="modificarCharla">
+    <part name="parameters" element="tns:modificarCharla" />
+  </message>
+  <message name="modificarCharlaResponse">
+    <part name="parameters" element="tns:modificarCharlaResponse" />
+  </message>
+  <message name="insertarCharla">
+    <part name="parameters" element="tns:insertarCharla" />
+  </message>
+  <message name="insertarCharlaResponse">
+    <part name="parameters" element="tns:insertarCharlaResponse" />
+  </message>
+  <message name="eliminarFacultad">
+    <part name="parameters" element="tns:eliminarFacultad" />
+  </message>
+  <message name="eliminarFacultadResponse">
+    <part name="parameters" element="tns:eliminarFacultadResponse" />
+  </message>
+  <message name="insertarTaller">
+    <part name="parameters" element="tns:insertarTaller" />
+  </message>
+  <message name="insertarTallerResponse">
+    <part name="parameters" element="tns:insertarTallerResponse" />
+  </message>
+  <message name="modificarTaller">
+    <part name="parameters" element="tns:modificarTaller" />
+  </message>
+  <message name="modificarTallerResponse">
+    <part name="parameters" element="tns:modificarTallerResponse" />
+  </message>
+  <message name="listarTodasSalas">
+    <part name="parameters" element="tns:listarTodasSalas" />
+  </message>
+  <message name="listarTodasSalasResponse">
+    <part name="parameters" element="tns:listarTodasSalasResponse" />
+  </message>
+  <message name="insertarSala">
+    <part name="parameters" element="tns:insertarSala" />
+  </message>
+  <message name="insertarSalaResponse">
+    <part name="parameters" element="tns:insertarSalaResponse" />
+  </message>
+  <message name="listarTodasAulas">
+    <part name="parameters" element="tns:listarTodasAulas" />
+  </message>
+  <message name="listarTodasAulasResponse">
+    <part name="parameters" element="tns:listarTodasAulasResponse" />
+  </message>
+  <message name="insertarAula">
+    <part name="parameters" element="tns:insertarAula" />
+  </message>
+  <message name="insertarAulaResponse">
+    <part name="parameters" element="tns:insertarAulaResponse" />
+  </message>
+  <message name="modificarSala">
+    <part name="parameters" element="tns:modificarSala" />
+  </message>
+  <message name="modificarSalaResponse">
+    <part name="parameters" element="tns:modificarSalaResponse" />
+  </message>
+  <message name="modificarAula">
+    <part name="parameters" element="tns:modificarAula" />
+  </message>
+  <message name="modificarAulaResponse">
+    <part name="parameters" element="tns:modificarAulaResponse" />
+  </message>
+  <portType name="LogisticsWS">
+    <operation name="modificarFacultad">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarFacultadRequest" message="tns:modificarFacultad" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarFacultadResponse" message="tns:modificarFacultadResponse" />
+    </operation>
+    <operation name="listarTodasCharlas">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasCharlasRequest" message="tns:listarTodasCharlas" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasCharlasResponse" message="tns:listarTodasCharlasResponse" />
+    </operation>
+    <operation name="listarTodasFacultades">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasFacultadesRequest" message="tns:listarTodasFacultades" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasFacultadesResponse" message="tns:listarTodasFacultadesResponse" />
+    </operation>
+    <operation name="listarTodasInstituciones">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasInstitucionesRequest" message="tns:listarTodasInstituciones" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasInstitucionesResponse" message="tns:listarTodasInstitucionesResponse" />
+    </operation>
+    <operation name="listaCharlasFecha">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listaCharlasFechaRequest" message="tns:listaCharlasFecha" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listaCharlasFechaResponse" message="tns:listaCharlasFechaResponse" />
+    </operation>
+    <operation name="insertarInstitucion">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarInstitucionRequest" message="tns:insertarInstitucion" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarInstitucionResponse" message="tns:insertarInstitucionResponse" />
+    </operation>
+    <operation name="inscribirseTaller">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/inscribirseTallerRequest" message="tns:inscribirseTaller" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/inscribirseTallerResponse" message="tns:inscribirseTallerResponse" />
+    </operation>
+    <operation name="modificarInstitucion">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarInstitucionRequest" message="tns:modificarInstitucion" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarInstitucionResponse" message="tns:modificarInstitucionResponse" />
+    </operation>
+    <operation name="eliminarInstitucion">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarInstitucionRequest" message="tns:eliminarInstitucion" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarInstitucionResponse" message="tns:eliminarInstitucionResponse" />
+    </operation>
+    <operation name="inscribirseCharla">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/inscribirseCharlaRequest" message="tns:inscribirseCharla" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/inscribirseCharlaResponse" message="tns:inscribirseCharlaResponse" />
+    </operation>
+    <operation name="listarTalleresFecha">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTalleresFechaRequest" message="tns:listarTalleresFecha" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTalleresFechaResponse" message="tns:listarTalleresFechaResponse" />
+    </operation>
+    <operation name="listarTodosTalleres">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodosTalleresRequest" message="tns:listarTodosTalleres" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodosTalleresResponse" message="tns:listarTodosTalleresResponse" />
+    </operation>
+    <operation name="eliminarCharla">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarCharlaRequest" message="tns:eliminarCharla" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarCharlaResponse" message="tns:eliminarCharlaResponse" />
+    </operation>
+    <operation name="eliminarSala">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarSalaRequest" message="tns:eliminarSala" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarSalaResponse" message="tns:eliminarSalaResponse" />
+    </operation>
+    <operation name="eliminarTaller">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarTallerRequest" message="tns:eliminarTaller" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarTallerResponse" message="tns:eliminarTallerResponse" />
+    </operation>
+    <operation name="eliminarAula">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarAulaRequest" message="tns:eliminarAula" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarAulaResponse" message="tns:eliminarAulaResponse" />
+    </operation>
+    <operation name="insertarFacultad">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarFacultadRequest" message="tns:insertarFacultad" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarFacultadResponse" message="tns:insertarFacultadResponse" />
+    </operation>
+    <operation name="modificarCharla">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarCharlaRequest" message="tns:modificarCharla" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarCharlaResponse" message="tns:modificarCharlaResponse" />
+    </operation>
+    <operation name="insertarCharla">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarCharlaRequest" message="tns:insertarCharla" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarCharlaResponse" message="tns:insertarCharlaResponse" />
+    </operation>
+    <operation name="eliminarFacultad">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarFacultadRequest" message="tns:eliminarFacultad" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/eliminarFacultadResponse" message="tns:eliminarFacultadResponse" />
+    </operation>
+    <operation name="insertarTaller">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarTallerRequest" message="tns:insertarTaller" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarTallerResponse" message="tns:insertarTallerResponse" />
+    </operation>
+    <operation name="modificarTaller">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarTallerRequest" message="tns:modificarTaller" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarTallerResponse" message="tns:modificarTallerResponse" />
+    </operation>
+    <operation name="listarTodasSalas">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasSalasRequest" message="tns:listarTodasSalas" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasSalasResponse" message="tns:listarTodasSalasResponse" />
+    </operation>
+    <operation name="insertarSala">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarSalaRequest" message="tns:insertarSala" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarSalaResponse" message="tns:insertarSalaResponse" />
+    </operation>
+    <operation name="listarTodasAulas">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasAulasRequest" message="tns:listarTodasAulas" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/listarTodasAulasResponse" message="tns:listarTodasAulasResponse" />
+    </operation>
+    <operation name="insertarAula">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarAulaRequest" message="tns:insertarAula" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/insertarAulaResponse" message="tns:insertarAulaResponse" />
+    </operation>
+    <operation name="modificarSala">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarSalaRequest" message="tns:modificarSala" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarSalaResponse" message="tns:modificarSalaResponse" />
+    </operation>
+    <operation name="modificarAula">
+      <input wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarAulaRequest" message="tns:modificarAula" />
+      <output wsam:Action="http://webservices.web.ulearn/LogisticsWS/modificarAulaResponse" message="tns:modificarAulaResponse" />
+    </operation>
+  </portType>
+  <binding name="LogisticsWSPortBinding" type="tns:LogisticsWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarFacultad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasCharlas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasFacultades">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasInstituciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listaCharlasFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarInstitucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="inscribirseTaller">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInstitucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarInstitucion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="inscribirseCharla">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTalleresFecha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosTalleres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCharla">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSala">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarTaller">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarFacultad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCharla">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCharla">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarFacultad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarTaller">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarTaller">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasSalas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSala">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasAulas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarSala">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LogisticsWS">
+    <port name="LogisticsWSPort" binding="tns:LogisticsWSPortBinding">
+      <soap:address location="http://localhost:8080/ULearnWS/LogisticsWS" />
+    </port>
+  </service>
+</definitions>

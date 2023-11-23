@@ -1,0 +1,1082 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.web.ulearn/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="AcademicsWS" targetNamespace="http://webservices.web.ulearn/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ULearnWS/AcademicsWS?xsd=1" namespace="http://webservices.web.ulearn/" />
+    </xsd:schema>
+  </types>
+  <message name="listarCarrerasPorFacultad">
+    <part name="parameters" element="tns:listarCarrerasPorFacultad" />
+  </message>
+  <message name="listarCarrerasPorFacultadResponse">
+    <part name="parameters" element="tns:listarCarrerasPorFacultadResponse" />
+  </message>
+  <message name="listarReclamoPorAlumnoSemestre">
+    <part name="parameters" element="tns:listarReclamoPorAlumnoSemestre" />
+  </message>
+  <message name="listarReclamoPorAlumnoSemestreResponse">
+    <part name="parameters" element="tns:listarReclamoPorAlumnoSemestreResponse" />
+  </message>
+  <message name="listarHorariosPorCurso">
+    <part name="parameters" element="tns:listarHorariosPorCurso" />
+  </message>
+  <message name="listarHorariosPorCursoResponse">
+    <part name="parameters" element="tns:listarHorariosPorCursoResponse" />
+  </message>
+  <message name="modificarSemestre">
+    <part name="parameters" element="tns:modificarSemestre" />
+  </message>
+  <message name="modificarSemestreResponse">
+    <part name="parameters" element="tns:modificarSemestreResponse" />
+  </message>
+  <message name="agregarAlumnoAHorario">
+    <part name="parameters" element="tns:agregarAlumnoAHorario" />
+  </message>
+  <message name="agregarAlumnoAHorarioResponse">
+    <part name="parameters" element="tns:agregarAlumnoAHorarioResponse" />
+  </message>
+  <message name="listarEvaluacionPorCursoSemestre">
+    <part name="parameters" element="tns:listarEvaluacionPorCursoSemestre" />
+  </message>
+  <message name="listarEvaluacionPorCursoSemestreResponse">
+    <part name="parameters" element="tns:listarEvaluacionPorCursoSemestreResponse" />
+  </message>
+  <message name="listarHorariosTodos">
+    <part name="parameters" element="tns:listarHorariosTodos" />
+  </message>
+  <message name="listarHorariosTodosResponse">
+    <part name="parameters" element="tns:listarHorariosTodosResponse" />
+  </message>
+  <message name="listarTodosCursos">
+    <part name="parameters" element="tns:listarTodosCursos" />
+  </message>
+  <message name="listarTodosCursosResponse">
+    <part name="parameters" element="tns:listarTodosCursosResponse" />
+  </message>
+  <message name="actualizarDocente">
+    <part name="parameters" element="tns:actualizarDocente" />
+  </message>
+  <message name="actualizarDocenteResponse">
+    <part name="parameters" element="tns:actualizarDocenteResponse" />
+  </message>
+  <message name="listarCursosAlumnoPorId">
+    <part name="parameters" element="tns:listarCursosAlumnoPorId" />
+  </message>
+  <message name="listarCursosAlumnoPorIdResponse">
+    <part name="parameters" element="tns:listarCursosAlumnoPorIdResponse" />
+  </message>
+  <message name="listarSemestresPorAlumno">
+    <part name="parameters" element="tns:listarSemestresPorAlumno" />
+  </message>
+  <message name="listarSemestresPorAlumnoResponse">
+    <part name="parameters" element="tns:listarSemestresPorAlumnoResponse" />
+  </message>
+  <message name="listarReclamoPorCursoSemestre">
+    <part name="parameters" element="tns:listarReclamoPorCursoSemestre" />
+  </message>
+  <message name="listarReclamoPorCursoSemestreResponse">
+    <part name="parameters" element="tns:listarReclamoPorCursoSemestreResponse" />
+  </message>
+  <message name="listarTodosSemestres">
+    <part name="parameters" element="tns:listarTodosSemestres" />
+  </message>
+  <message name="listarTodosSemestresResponse">
+    <part name="parameters" element="tns:listarTodosSemestresResponse" />
+  </message>
+  <message name="actualizarContrasenhaDocente">
+    <part name="parameters" element="tns:actualizarContrasenhaDocente" />
+  </message>
+  <message name="actualizarContrasenhaDocenteResponse">
+    <part name="parameters" element="tns:actualizarContrasenhaDocenteResponse" />
+  </message>
+  <message name="actualizarContrasenha">
+    <part name="parameters" element="tns:actualizarContrasenha" />
+  </message>
+  <message name="actualizarContrasenhaResponse">
+    <part name="parameters" element="tns:actualizarContrasenhaResponse" />
+  </message>
+  <message name="listarCASSPorAlumnoSemestre">
+    <part name="parameters" element="tns:listarCASSPorAlumnoSemestre" />
+  </message>
+  <message name="listarCASSPorAlumnoSemestreResponse">
+    <part name="parameters" element="tns:listarCASSPorAlumnoSemestreResponse" />
+  </message>
+  <message name="listarTodasCarreras">
+    <part name="parameters" element="tns:listarTodasCarreras" />
+  </message>
+  <message name="listarTodasCarrerasResponse">
+    <part name="parameters" element="tns:listarTodasCarrerasResponse" />
+  </message>
+  <message name="listarDocentesPorNombre">
+    <part name="parameters" element="tns:listarDocentesPorNombre" />
+  </message>
+  <message name="listarDocentesPorNombreResponse">
+    <part name="parameters" element="tns:listarDocentesPorNombreResponse" />
+  </message>
+  <message name="listarHorariosPorAlumno">
+    <part name="parameters" element="tns:listarHorariosPorAlumno" />
+  </message>
+  <message name="listarHorariosPorAlumnoResponse">
+    <part name="parameters" element="tns:listarHorariosPorAlumnoResponse" />
+  </message>
+  <message name="actualizarCorreoDocente">
+    <part name="parameters" element="tns:actualizarCorreoDocente" />
+  </message>
+  <message name="actualizarCorreoDocenteResponse">
+    <part name="parameters" element="tns:actualizarCorreoDocenteResponse" />
+  </message>
+  <message name="modificarEvaluacion">
+    <part name="parameters" element="tns:modificarEvaluacion" />
+  </message>
+  <message name="modificarEvaluacionResponse">
+    <part name="parameters" element="tns:modificarEvaluacionResponse" />
+  </message>
+  <message name="listarDocentesTodos">
+    <part name="parameters" element="tns:listarDocentesTodos" />
+  </message>
+  <message name="listarDocentesTodosResponse">
+    <part name="parameters" element="tns:listarDocentesTodosResponse" />
+  </message>
+  <message name="hallarTotalizadosHorario">
+    <part name="parameters" element="tns:hallarTotalizadosHorario" />
+  </message>
+  <message name="hallarTotalizadosHorarioResponse">
+    <part name="parameters" element="tns:hallarTotalizadosHorarioResponse" />
+  </message>
+  <message name="listarHorariosPorDocente">
+    <part name="parameters" element="tns:listarHorariosPorDocente" />
+  </message>
+  <message name="listarHorariosPorDocenteResponse">
+    <part name="parameters" element="tns:listarHorariosPorDocenteResponse" />
+  </message>
+  <message name="listarCursosDocentePorId">
+    <part name="parameters" element="tns:listarCursosDocentePorId" />
+  </message>
+  <message name="listarCursosDocentePorIdResponse">
+    <part name="parameters" element="tns:listarCursosDocentePorIdResponse" />
+  </message>
+  <message name="listarDocentesDeHorario">
+    <part name="parameters" element="tns:listarDocentesDeHorario" />
+  </message>
+  <message name="listarDocentesDeHorarioResponse">
+    <part name="parameters" element="tns:listarDocentesDeHorarioResponse" />
+  </message>
+  <message name="listarCursosCodigoNombre">
+    <part name="parameters" element="tns:listarCursosCodigoNombre" />
+  </message>
+  <message name="listarCursosCodigoNombreResponse">
+    <part name="parameters" element="tns:listarCursosCodigoNombreResponse" />
+  </message>
+  <message name="hallarDocentePorId">
+    <part name="parameters" element="tns:hallarDocentePorId" />
+  </message>
+  <message name="hallarDocentePorIdResponse">
+    <part name="parameters" element="tns:hallarDocentePorIdResponse" />
+  </message>
+  <message name="hallarAlumnoPorId">
+    <part name="parameters" element="tns:hallarAlumnoPorId" />
+  </message>
+  <message name="hallarAlumnoPorIdResponse">
+    <part name="parameters" element="tns:hallarAlumnoPorIdResponse" />
+  </message>
+  <message name="listarAlumnosDeHorario">
+    <part name="parameters" element="tns:listarAlumnosDeHorario" />
+  </message>
+  <message name="listarAlumnosDeHorarioResponse">
+    <part name="parameters" element="tns:listarAlumnosDeHorarioResponse" />
+  </message>
+  <message name="actualizarUsuarioDocente">
+    <part name="parameters" element="tns:actualizarUsuarioDocente" />
+  </message>
+  <message name="actualizarUsuarioDocenteResponse">
+    <part name="parameters" element="tns:actualizarUsuarioDocenteResponse" />
+  </message>
+  <message name="actualizarTipoDocentePorId">
+    <part name="parameters" element="tns:actualizarTipoDocentePorId" />
+  </message>
+  <message name="actualizarTipoDocentePorIdResponse">
+    <part name="parameters" element="tns:actualizarTipoDocentePorIdResponse" />
+  </message>
+  <message name="listarAlumnosXCodigoNombre">
+    <part name="parameters" element="tns:listarAlumnosXCodigoNombre" />
+  </message>
+  <message name="listarAlumnosXCodigoNombreResponse">
+    <part name="parameters" element="tns:listarAlumnosXCodigoNombreResponse" />
+  </message>
+  <message name="agregarDocenteAHorario">
+    <part name="parameters" element="tns:agregarDocenteAHorario" />
+  </message>
+  <message name="agregarDocenteAHorarioResponse">
+    <part name="parameters" element="tns:agregarDocenteAHorarioResponse" />
+  </message>
+  <message name="agregarCursoASemestre">
+    <part name="parameters" element="tns:agregarCursoASemestre" />
+  </message>
+  <message name="agregarCursoASemestreResponse">
+    <part name="parameters" element="tns:agregarCursoASemestreResponse" />
+  </message>
+  <message name="actualizarAlumnoPerfil">
+    <part name="parameters" element="tns:actualizarAlumnoPerfil" />
+  </message>
+  <message name="actualizarAlumnoPerfilResponse">
+    <part name="parameters" element="tns:actualizarAlumnoPerfilResponse" />
+  </message>
+  <message name="actualizarDocentePerfil">
+    <part name="parameters" element="tns:actualizarDocentePerfil" />
+  </message>
+  <message name="actualizarDocentePerfilResponse">
+    <part name="parameters" element="tns:actualizarDocentePerfilResponse" />
+  </message>
+  <message name="listarEvaluacionxAlumno">
+    <part name="parameters" element="tns:listarEvaluacionxAlumno" />
+  </message>
+  <message name="listarEvaluacionxAlumnoResponse">
+    <part name="parameters" element="tns:listarEvaluacionxAlumnoResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
+  </message>
+  <message name="eliminarDocentePorId">
+    <part name="parameters" element="tns:eliminarDocentePorId" />
+  </message>
+  <message name="eliminarDocentePorIdResponse">
+    <part name="parameters" element="tns:eliminarDocentePorIdResponse" />
+  </message>
+  <message name="insertarAlumno">
+    <part name="parameters" element="tns:insertarAlumno" />
+  </message>
+  <message name="insertarAlumnoResponse">
+    <part name="parameters" element="tns:insertarAlumnoResponse" />
+  </message>
+  <message name="eliminarCurso">
+    <part name="parameters" element="tns:eliminarCurso" />
+  </message>
+  <message name="eliminarCursoResponse">
+    <part name="parameters" element="tns:eliminarCursoResponse" />
+  </message>
+  <message name="insertarCurso">
+    <part name="parameters" element="tns:insertarCurso" />
+  </message>
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
+  </message>
+  <message name="insertarHorario">
+    <part name="parameters" element="tns:insertarHorario" />
+  </message>
+  <message name="insertarHorarioResponse">
+    <part name="parameters" element="tns:insertarHorarioResponse" />
+  </message>
+  <message name="eliminarHorario">
+    <part name="parameters" element="tns:eliminarHorario" />
+  </message>
+  <message name="eliminarHorarioResponse">
+    <part name="parameters" element="tns:eliminarHorarioResponse" />
+  </message>
+  <message name="modificarHorario">
+    <part name="parameters" element="tns:modificarHorario" />
+  </message>
+  <message name="modificarHorarioResponse">
+    <part name="parameters" element="tns:modificarHorarioResponse" />
+  </message>
+  <message name="insertarDocente">
+    <part name="parameters" element="tns:insertarDocente" />
+  </message>
+  <message name="insertarDocenteResponse">
+    <part name="parameters" element="tns:insertarDocenteResponse" />
+  </message>
+  <message name="modificarReclamo">
+    <part name="parameters" element="tns:modificarReclamo" />
+  </message>
+  <message name="modificarReclamoResponse">
+    <part name="parameters" element="tns:modificarReclamoResponse" />
+  </message>
+  <message name="insertarReclamo">
+    <part name="parameters" element="tns:insertarReclamo" />
+  </message>
+  <message name="insertarReclamoResponse">
+    <part name="parameters" element="tns:insertarReclamoResponse" />
+  </message>
+  <message name="insertarCarrera">
+    <part name="parameters" element="tns:insertarCarrera" />
+  </message>
+  <message name="insertarCarreraResponse">
+    <part name="parameters" element="tns:insertarCarreraResponse" />
+  </message>
+  <message name="modificarCarrera">
+    <part name="parameters" element="tns:modificarCarrera" />
+  </message>
+  <message name="modificarCarreraResponse">
+    <part name="parameters" element="tns:modificarCarreraResponse" />
+  </message>
+  <message name="insertarSemestre">
+    <part name="parameters" element="tns:insertarSemestre" />
+  </message>
+  <message name="insertarSemestreResponse">
+    <part name="parameters" element="tns:insertarSemestreResponse" />
+  </message>
+  <message name="actualizarAlumno">
+    <part name="parameters" element="tns:actualizarAlumno" />
+  </message>
+  <message name="actualizarAlumnoResponse">
+    <part name="parameters" element="tns:actualizarAlumnoResponse" />
+  </message>
+  <message name="eliminarCarrera">
+    <part name="parameters" element="tns:eliminarCarrera" />
+  </message>
+  <message name="eliminarCarreraResponse">
+    <part name="parameters" element="tns:eliminarCarreraResponse" />
+  </message>
+  <message name="actualizarCurso">
+    <part name="parameters" element="tns:actualizarCurso" />
+  </message>
+  <message name="actualizarCursoResponse">
+    <part name="parameters" element="tns:actualizarCursoResponse" />
+  </message>
+  <message name="eliminarSemestre">
+    <part name="parameters" element="tns:eliminarSemestre" />
+  </message>
+  <message name="eliminarSemestreResponse">
+    <part name="parameters" element="tns:eliminarSemestreResponse" />
+  </message>
+  <portType name="AcademicsWS">
+    <operation name="listarCarrerasPorFacultad">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCarrerasPorFacultadRequest" message="tns:listarCarrerasPorFacultad" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCarrerasPorFacultadResponse" message="tns:listarCarrerasPorFacultadResponse" />
+    </operation>
+    <operation name="listarReclamoPorAlumnoSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarReclamoPorAlumnoSemestreRequest" message="tns:listarReclamoPorAlumnoSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarReclamoPorAlumnoSemestreResponse" message="tns:listarReclamoPorAlumnoSemestreResponse" />
+    </operation>
+    <operation name="listarHorariosPorCurso">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorCursoRequest" message="tns:listarHorariosPorCurso" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorCursoResponse" message="tns:listarHorariosPorCursoResponse" />
+    </operation>
+    <operation name="modificarSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarSemestreRequest" message="tns:modificarSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarSemestreResponse" message="tns:modificarSemestreResponse" />
+    </operation>
+    <operation name="agregarAlumnoAHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarAlumnoAHorarioRequest" message="tns:agregarAlumnoAHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarAlumnoAHorarioResponse" message="tns:agregarAlumnoAHorarioResponse" />
+    </operation>
+    <operation name="listarEvaluacionPorCursoSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarEvaluacionPorCursoSemestreRequest" message="tns:listarEvaluacionPorCursoSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarEvaluacionPorCursoSemestreResponse" message="tns:listarEvaluacionPorCursoSemestreResponse" />
+    </operation>
+    <operation name="listarHorariosTodos">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosTodosRequest" message="tns:listarHorariosTodos" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosTodosResponse" message="tns:listarHorariosTodosResponse" />
+    </operation>
+    <operation name="listarTodosCursos">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
+    </operation>
+    <operation name="actualizarDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarDocenteRequest" message="tns:actualizarDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarDocenteResponse" message="tns:actualizarDocenteResponse" />
+    </operation>
+    <operation name="listarCursosAlumnoPorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosAlumnoPorIdRequest" message="tns:listarCursosAlumnoPorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosAlumnoPorIdResponse" message="tns:listarCursosAlumnoPorIdResponse" />
+    </operation>
+    <operation name="listarSemestresPorAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarSemestresPorAlumnoRequest" message="tns:listarSemestresPorAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarSemestresPorAlumnoResponse" message="tns:listarSemestresPorAlumnoResponse" />
+    </operation>
+    <operation name="listarReclamoPorCursoSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarReclamoPorCursoSemestreRequest" message="tns:listarReclamoPorCursoSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarReclamoPorCursoSemestreResponse" message="tns:listarReclamoPorCursoSemestreResponse" />
+    </operation>
+    <operation name="listarTodosSemestres">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodosSemestresRequest" message="tns:listarTodosSemestres" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodosSemestresResponse" message="tns:listarTodosSemestresResponse" />
+    </operation>
+    <operation name="actualizarContrasenhaDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarContrasenhaDocenteRequest" message="tns:actualizarContrasenhaDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarContrasenhaDocenteResponse" message="tns:actualizarContrasenhaDocenteResponse" />
+    </operation>
+    <operation name="actualizarContrasenha">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarContrasenhaRequest" message="tns:actualizarContrasenha" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarContrasenhaResponse" message="tns:actualizarContrasenhaResponse" />
+    </operation>
+    <operation name="listarCASSPorAlumnoSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCASSPorAlumnoSemestreRequest" message="tns:listarCASSPorAlumnoSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCASSPorAlumnoSemestreResponse" message="tns:listarCASSPorAlumnoSemestreResponse" />
+    </operation>
+    <operation name="listarTodasCarreras">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodasCarrerasRequest" message="tns:listarTodasCarreras" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarTodasCarrerasResponse" message="tns:listarTodasCarrerasResponse" />
+    </operation>
+    <operation name="listarDocentesPorNombre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesPorNombreRequest" message="tns:listarDocentesPorNombre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesPorNombreResponse" message="tns:listarDocentesPorNombreResponse" />
+    </operation>
+    <operation name="listarHorariosPorAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorAlumnoRequest" message="tns:listarHorariosPorAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorAlumnoResponse" message="tns:listarHorariosPorAlumnoResponse" />
+    </operation>
+    <operation name="actualizarCorreoDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarCorreoDocenteRequest" message="tns:actualizarCorreoDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarCorreoDocenteResponse" message="tns:actualizarCorreoDocenteResponse" />
+    </operation>
+    <operation name="modificarEvaluacion">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarEvaluacionRequest" message="tns:modificarEvaluacion" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarEvaluacionResponse" message="tns:modificarEvaluacionResponse" />
+    </operation>
+    <operation name="listarDocentesTodos">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesTodosRequest" message="tns:listarDocentesTodos" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesTodosResponse" message="tns:listarDocentesTodosResponse" />
+    </operation>
+    <operation name="hallarTotalizadosHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarTotalizadosHorarioRequest" message="tns:hallarTotalizadosHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarTotalizadosHorarioResponse" message="tns:hallarTotalizadosHorarioResponse" />
+    </operation>
+    <operation name="listarHorariosPorDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorDocenteRequest" message="tns:listarHorariosPorDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarHorariosPorDocenteResponse" message="tns:listarHorariosPorDocenteResponse" />
+    </operation>
+    <operation name="listarCursosDocentePorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosDocentePorIdRequest" message="tns:listarCursosDocentePorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosDocentePorIdResponse" message="tns:listarCursosDocentePorIdResponse" />
+    </operation>
+    <operation name="listarDocentesDeHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesDeHorarioRequest" message="tns:listarDocentesDeHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarDocentesDeHorarioResponse" message="tns:listarDocentesDeHorarioResponse" />
+    </operation>
+    <operation name="listarCursosCodigoNombre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosCodigoNombreRequest" message="tns:listarCursosCodigoNombre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarCursosCodigoNombreResponse" message="tns:listarCursosCodigoNombreResponse" />
+    </operation>
+    <operation name="hallarDocentePorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarDocentePorIdRequest" message="tns:hallarDocentePorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarDocentePorIdResponse" message="tns:hallarDocentePorIdResponse" />
+    </operation>
+    <operation name="hallarAlumnoPorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarAlumnoPorIdRequest" message="tns:hallarAlumnoPorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/hallarAlumnoPorIdResponse" message="tns:hallarAlumnoPorIdResponse" />
+    </operation>
+    <operation name="listarAlumnosDeHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarAlumnosDeHorarioRequest" message="tns:listarAlumnosDeHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarAlumnosDeHorarioResponse" message="tns:listarAlumnosDeHorarioResponse" />
+    </operation>
+    <operation name="actualizarUsuarioDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarUsuarioDocenteRequest" message="tns:actualizarUsuarioDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarUsuarioDocenteResponse" message="tns:actualizarUsuarioDocenteResponse" />
+    </operation>
+    <operation name="actualizarTipoDocentePorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarTipoDocentePorIdRequest" message="tns:actualizarTipoDocentePorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarTipoDocentePorIdResponse" message="tns:actualizarTipoDocentePorIdResponse" />
+    </operation>
+    <operation name="listarAlumnosXCodigoNombre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarAlumnosXCodigoNombreRequest" message="tns:listarAlumnosXCodigoNombre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarAlumnosXCodigoNombreResponse" message="tns:listarAlumnosXCodigoNombreResponse" />
+    </operation>
+    <operation name="agregarDocenteAHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarDocenteAHorarioRequest" message="tns:agregarDocenteAHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarDocenteAHorarioResponse" message="tns:agregarDocenteAHorarioResponse" />
+    </operation>
+    <operation name="agregarCursoASemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarCursoASemestreRequest" message="tns:agregarCursoASemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/agregarCursoASemestreResponse" message="tns:agregarCursoASemestreResponse" />
+    </operation>
+    <operation name="actualizarAlumnoPerfil">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarAlumnoPerfilRequest" message="tns:actualizarAlumnoPerfil" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarAlumnoPerfilResponse" message="tns:actualizarAlumnoPerfilResponse" />
+    </operation>
+    <operation name="actualizarDocentePerfil">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarDocentePerfilRequest" message="tns:actualizarDocentePerfil" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarDocentePerfilResponse" message="tns:actualizarDocentePerfilResponse" />
+    </operation>
+    <operation name="listarEvaluacionxAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarEvaluacionxAlumnoRequest" message="tns:listarEvaluacionxAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/listarEvaluacionxAlumnoResponse" message="tns:listarEvaluacionxAlumnoResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarDocentePorId">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarDocentePorIdRequest" message="tns:eliminarDocentePorId" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarDocentePorIdResponse" message="tns:eliminarDocentePorIdResponse" />
+    </operation>
+    <operation name="insertarAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarAlumnoRequest" message="tns:insertarAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarAlumnoResponse" message="tns:insertarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarCurso">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarCursoRequest" message="tns:eliminarCurso" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
+    </operation>
+    <operation name="insertarCurso">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarCursoRequest" message="tns:insertarCurso" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
+    </operation>
+    <operation name="insertarHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarHorarioRequest" message="tns:insertarHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarHorarioResponse" message="tns:insertarHorarioResponse" />
+    </operation>
+    <operation name="eliminarHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarHorarioRequest" message="tns:eliminarHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarHorarioResponse" message="tns:eliminarHorarioResponse" />
+    </operation>
+    <operation name="modificarHorario">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarHorarioRequest" message="tns:modificarHorario" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarHorarioResponse" message="tns:modificarHorarioResponse" />
+    </operation>
+    <operation name="insertarDocente">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarDocenteRequest" message="tns:insertarDocente" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarDocenteResponse" message="tns:insertarDocenteResponse" />
+    </operation>
+    <operation name="modificarReclamo">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarReclamoRequest" message="tns:modificarReclamo" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarReclamoResponse" message="tns:modificarReclamoResponse" />
+    </operation>
+    <operation name="insertarReclamo">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarReclamoRequest" message="tns:insertarReclamo" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarReclamoResponse" message="tns:insertarReclamoResponse" />
+    </operation>
+    <operation name="insertarCarrera">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarCarreraRequest" message="tns:insertarCarrera" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarCarreraResponse" message="tns:insertarCarreraResponse" />
+    </operation>
+    <operation name="modificarCarrera">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarCarreraRequest" message="tns:modificarCarrera" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/modificarCarreraResponse" message="tns:modificarCarreraResponse" />
+    </operation>
+    <operation name="insertarSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarSemestreRequest" message="tns:insertarSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/insertarSemestreResponse" message="tns:insertarSemestreResponse" />
+    </operation>
+    <operation name="actualizarAlumno">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarAlumnoRequest" message="tns:actualizarAlumno" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarAlumnoResponse" message="tns:actualizarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarCarrera">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarCarreraRequest" message="tns:eliminarCarrera" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarCarreraResponse" message="tns:eliminarCarreraResponse" />
+    </operation>
+    <operation name="actualizarCurso">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarCursoRequest" message="tns:actualizarCurso" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/actualizarCursoResponse" message="tns:actualizarCursoResponse" />
+    </operation>
+    <operation name="eliminarSemestre">
+      <input wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarSemestreRequest" message="tns:eliminarSemestre" />
+      <output wsam:Action="http://webservices.web.ulearn/AcademicsWS/eliminarSemestreResponse" message="tns:eliminarSemestreResponse" />
+    </operation>
+  </portType>
+  <binding name="AcademicsWSPortBinding" type="tns:AcademicsWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarCarrerasPorFacultad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReclamoPorAlumnoSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorariosPorCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarAlumnoAHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacionPorCursoSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorariosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosCursos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosAlumnoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSemestresPorAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarReclamoPorCursoSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosSemestres">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarContrasenhaDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarContrasenha">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCASSPorAlumnoSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasCarreras">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDocentesPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorariosPorAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCorreoDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEvaluacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDocentesTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hallarTotalizadosHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarHorariosPorDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosDocentePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDocentesDeHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosCodigoNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hallarDocentePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hallarAlumnoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnosDeHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarUsuarioDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarTipoDocentePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnosXCodigoNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarDocenteAHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarCursoASemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAlumnoPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarDocentePerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEvaluacionxAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDocentePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHorario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDocente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarReclamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarReclamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCarrera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCarrera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCarrera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarSemestre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AcademicsWS">
+    <port name="AcademicsWSPort" binding="tns:AcademicsWSPortBinding">
+      <soap:address location="http://localhost:8080/ULearnWS/AcademicsWS" />
+    </port>
+  </service>
+</definitions>

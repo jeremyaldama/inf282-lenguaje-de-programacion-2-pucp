@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="LogisticsWS">
+      <implementation-class>ulearn.web.webservices.LogisticsWS</implementation-class>
+    </service>
+    <service name="ReportesWS">
+      <implementation-class>ulearn.web.webservices.ReportesWS</implementation-class>
+    </service>
+    <service name="AcademicsWS">
+      <implementation-class>ulearn.web.webservices.AcademicsWS</implementation-class>
+    </service>
+    <service name="StaffWS">
+      <implementation-class>ulearn.web.webservices.StaffWS</implementation-class>
+    </service>
+    <service name="LibraryWS">
+      <implementation-class>ulearn.web.webservices.LibraryWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

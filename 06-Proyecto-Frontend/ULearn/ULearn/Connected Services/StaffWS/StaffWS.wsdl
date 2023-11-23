@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.web.ulearn/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="StaffWS" targetNamespace="http://webservices.web.ulearn/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ULearnWS/StaffWS?xsd=1" namespace="http://webservices.web.ulearn/" />
+    </xsd:schema>
+  </types>
+  <message name="buscarFotoPerfil">
+    <part name="parameters" element="tns:buscarFotoPerfil" />
+  </message>
+  <message name="buscarFotoPerfilResponse">
+    <part name="parameters" element="tns:buscarFotoPerfilResponse" />
+  </message>
+  <message name="eliminarAdministrador">
+    <part name="parameters" element="tns:eliminarAdministrador" />
+  </message>
+  <message name="eliminarAdministradorResponse">
+    <part name="parameters" element="tns:eliminarAdministradorResponse" />
+  </message>
+  <message name="eliminarEncargado">
+    <part name="parameters" element="tns:eliminarEncargado" />
+  </message>
+  <message name="eliminarEncargadoResponse">
+    <part name="parameters" element="tns:eliminarEncargadoResponse" />
+  </message>
+  <message name="listarTodosEncargados">
+    <part name="parameters" element="tns:listarTodosEncargados" />
+  </message>
+  <message name="listarTodosEncargadosResponse">
+    <part name="parameters" element="tns:listarTodosEncargadosResponse" />
+  </message>
+  <message name="insertarEncargado">
+    <part name="parameters" element="tns:insertarEncargado" />
+  </message>
+  <message name="insertarEncargadoResponse">
+    <part name="parameters" element="tns:insertarEncargadoResponse" />
+  </message>
+  <message name="hallarAdministradorPorId">
+    <part name="parameters" element="tns:hallarAdministradorPorId" />
+  </message>
+  <message name="hallarAdministradorPorIdResponse">
+    <part name="parameters" element="tns:hallarAdministradorPorIdResponse" />
+  </message>
+  <message name="listarEncargadosXUsuarioNombre">
+    <part name="parameters" element="tns:listarEncargadosXUsuarioNombre" />
+  </message>
+  <message name="listarEncargadosXUsuarioNombreResponse">
+    <part name="parameters" element="tns:listarEncargadosXUsuarioNombreResponse" />
+  </message>
+  <message name="actualizarEncargado">
+    <part name="parameters" element="tns:actualizarEncargado" />
+  </message>
+  <message name="actualizarEncargadoResponse">
+    <part name="parameters" element="tns:actualizarEncargadoResponse" />
+  </message>
+  <message name="listarTodosAdministradores">
+    <part name="parameters" element="tns:listarTodosAdministradores" />
+  </message>
+  <message name="listarTodosAdministradoresResponse">
+    <part name="parameters" element="tns:listarTodosAdministradoresResponse" />
+  </message>
+  <message name="hallarEncargadoPorId">
+    <part name="parameters" element="tns:hallarEncargadoPorId" />
+  </message>
+  <message name="hallarEncargadoPorIdResponse">
+    <part name="parameters" element="tns:hallarEncargadoPorIdResponse" />
+  </message>
+  <message name="insertarAdministrador">
+    <part name="parameters" element="tns:insertarAdministrador" />
+  </message>
+  <message name="insertarAdministradorResponse">
+    <part name="parameters" element="tns:insertarAdministradorResponse" />
+  </message>
+  <message name="iniciarSesion">
+    <part name="parameters" element="tns:iniciarSesion" />
+  </message>
+  <message name="iniciarSesionResponse">
+    <part name="parameters" element="tns:iniciarSesionResponse" />
+  </message>
+  <portType name="StaffWS">
+    <operation name="buscarFotoPerfil">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/buscarFotoPerfilRequest" message="tns:buscarFotoPerfil" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/buscarFotoPerfilResponse" message="tns:buscarFotoPerfilResponse" />
+    </operation>
+    <operation name="eliminarAdministrador">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+    </operation>
+    <operation name="eliminarEncargado">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/eliminarEncargadoRequest" message="tns:eliminarEncargado" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/eliminarEncargadoResponse" message="tns:eliminarEncargadoResponse" />
+    </operation>
+    <operation name="listarTodosEncargados">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/listarTodosEncargadosRequest" message="tns:listarTodosEncargados" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/listarTodosEncargadosResponse" message="tns:listarTodosEncargadosResponse" />
+    </operation>
+    <operation name="insertarEncargado">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/insertarEncargadoRequest" message="tns:insertarEncargado" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/insertarEncargadoResponse" message="tns:insertarEncargadoResponse" />
+    </operation>
+    <operation name="hallarAdministradorPorId">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/hallarAdministradorPorIdRequest" message="tns:hallarAdministradorPorId" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/hallarAdministradorPorIdResponse" message="tns:hallarAdministradorPorIdResponse" />
+    </operation>
+    <operation name="listarEncargadosXUsuarioNombre">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/listarEncargadosXUsuarioNombreRequest" message="tns:listarEncargadosXUsuarioNombre" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/listarEncargadosXUsuarioNombreResponse" message="tns:listarEncargadosXUsuarioNombreResponse" />
+    </operation>
+    <operation name="actualizarEncargado">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/actualizarEncargadoRequest" message="tns:actualizarEncargado" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/actualizarEncargadoResponse" message="tns:actualizarEncargadoResponse" />
+    </operation>
+    <operation name="listarTodosAdministradores">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/listarTodosAdministradoresRequest" message="tns:listarTodosAdministradores" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/listarTodosAdministradoresResponse" message="tns:listarTodosAdministradoresResponse" />
+    </operation>
+    <operation name="hallarEncargadoPorId">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/hallarEncargadoPorIdRequest" message="tns:hallarEncargadoPorId" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/hallarEncargadoPorIdResponse" message="tns:hallarEncargadoPorIdResponse" />
+    </operation>
+    <operation name="insertarAdministrador">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
+    </operation>
+    <operation name="iniciarSesion">
+      <input wsam:Action="http://webservices.web.ulearn/StaffWS/iniciarSesionRequest" message="tns:iniciarSesion" />
+      <output wsam:Action="http://webservices.web.ulearn/StaffWS/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
+    </operation>
+  </portType>
+  <binding name="StaffWSPortBinding" type="tns:StaffWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarFotoPerfil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarEncargado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosEncargados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarEncargado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hallarAdministradorPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarEncargadosXUsuarioNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEncargado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosAdministradores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="hallarEncargadoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iniciarSesion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="StaffWS">
+    <port name="StaffWSPort" binding="tns:StaffWSPortBinding">
+      <soap:address location="http://localhost:8080/ULearnWS/StaffWS" />
+    </port>
+  </service>
+</definitions>

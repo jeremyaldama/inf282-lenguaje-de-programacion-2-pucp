@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservices.web.ulearn/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="LibraryWS" targetNamespace="http://webservices.web.ulearn/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/ULearnWS/LibraryWS?xsd=1" namespace="http://webservices.web.ulearn/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarBiblioteca">
+    <part name="parameters" element="tns:insertarBiblioteca" />
+  </message>
+  <message name="insertarBibliotecaResponse">
+    <part name="parameters" element="tns:insertarBibliotecaResponse" />
+  </message>
+  <message name="listarAutoresPorNombre">
+    <part name="parameters" element="tns:listarAutoresPorNombre" />
+  </message>
+  <message name="listarAutoresPorNombreResponse">
+    <part name="parameters" element="tns:listarAutoresPorNombreResponse" />
+  </message>
+  <message name="listarBibliotecasIdEncargado">
+    <part name="parameters" element="tns:listarBibliotecasIdEncargado" />
+  </message>
+  <message name="listarBibliotecasIdEncargadoResponse">
+    <part name="parameters" element="tns:listarBibliotecasIdEncargadoResponse" />
+  </message>
+  <message name="listarLibrosTodos">
+    <part name="parameters" element="tns:listarLibrosTodos" />
+  </message>
+  <message name="listarLibrosTodosResponse">
+    <part name="parameters" element="tns:listarLibrosTodosResponse" />
+  </message>
+  <message name="listarDigitalesTodos">
+    <part name="parameters" element="tns:listarDigitalesTodos" />
+  </message>
+  <message name="listarDigitalesTodosResponse">
+    <part name="parameters" element="tns:listarDigitalesTodosResponse" />
+  </message>
+  <message name="eliminarBiblioteca">
+    <part name="parameters" element="tns:eliminarBiblioteca" />
+  </message>
+  <message name="eliminarBibliotecaResponse">
+    <part name="parameters" element="tns:eliminarBibliotecaResponse" />
+  </message>
+  <message name="listarAutoresPorIdRecurso">
+    <part name="parameters" element="tns:listarAutoresPorIdRecurso" />
+  </message>
+  <message name="listarAutoresPorIdRecursoResponse">
+    <part name="parameters" element="tns:listarAutoresPorIdRecursoResponse" />
+  </message>
+  <message name="listarBibliotecasTodas">
+    <part name="parameters" element="tns:listarBibliotecasTodas" />
+  </message>
+  <message name="listarBibliotecasTodasResponse">
+    <part name="parameters" element="tns:listarBibliotecasTodasResponse" />
+  </message>
+  <message name="listarPrestamosConFiltros">
+    <part name="parameters" element="tns:listarPrestamosConFiltros" />
+  </message>
+  <message name="listarPrestamosConFiltrosResponse">
+    <part name="parameters" element="tns:listarPrestamosConFiltrosResponse" />
+  </message>
+  <message name="registrarRetiroPrestamo">
+    <part name="parameters" element="tns:registrarRetiroPrestamo" />
+  </message>
+  <message name="registrarRetiroPrestamoResponse">
+    <part name="parameters" element="tns:registrarRetiroPrestamoResponse" />
+  </message>
+  <message name="registrarDevolucionPrestamo">
+    <part name="parameters" element="tns:registrarDevolucionPrestamo" />
+  </message>
+  <message name="registrarDevolucionPrestamoResponse">
+    <part name="parameters" element="tns:registrarDevolucionPrestamoResponse" />
+  </message>
+  <message name="listarPrestamosPorLibro">
+    <part name="parameters" element="tns:listarPrestamosPorLibro" />
+  </message>
+  <message name="listarPrestamosPorLibroResponse">
+    <part name="parameters" element="tns:listarPrestamosPorLibroResponse" />
+  </message>
+  <message name="registrarPrestamo">
+    <part name="parameters" element="tns:registrarPrestamo" />
+  </message>
+  <message name="registrarPrestamoResponse">
+    <part name="parameters" element="tns:registrarPrestamoResponse" />
+  </message>
+  <message name="modificarBiblioteca">
+    <part name="parameters" element="tns:modificarBiblioteca" />
+  </message>
+  <message name="modificarBibliotecaResponse">
+    <part name="parameters" element="tns:modificarBibliotecaResponse" />
+  </message>
+  <message name="modificarPrestamo">
+    <part name="parameters" element="tns:modificarPrestamo" />
+  </message>
+  <message name="modificarPrestamoResponse">
+    <part name="parameters" element="tns:modificarPrestamoResponse" />
+  </message>
+  <message name="listarRecursosPorTituloAutorConFiltros">
+    <part name="parameters" element="tns:listarRecursosPorTituloAutorConFiltros" />
+  </message>
+  <message name="listarRecursosPorTituloAutorConFiltrosResponse">
+    <part name="parameters" element="tns:listarRecursosPorTituloAutorConFiltrosResponse" />
+  </message>
+  <message name="modificarAutor">
+    <part name="parameters" element="tns:modificarAutor" />
+  </message>
+  <message name="modificarAutorResponse">
+    <part name="parameters" element="tns:modificarAutorResponse" />
+  </message>
+  <message name="modificarLibro">
+    <part name="parameters" element="tns:modificarLibro" />
+  </message>
+  <message name="modificarLibroResponse">
+    <part name="parameters" element="tns:modificarLibroResponse" />
+  </message>
+  <message name="anularPrestamo">
+    <part name="parameters" element="tns:anularPrestamo" />
+  </message>
+  <message name="anularPrestamoResponse">
+    <part name="parameters" element="tns:anularPrestamoResponse" />
+  </message>
+  <message name="insertarAutor">
+    <part name="parameters" element="tns:insertarAutor" />
+  </message>
+  <message name="insertarAutorResponse">
+    <part name="parameters" element="tns:insertarAutorResponse" />
+  </message>
+  <message name="eliminarAutor">
+    <part name="parameters" element="tns:eliminarAutor" />
+  </message>
+  <message name="eliminarAutorResponse">
+    <part name="parameters" element="tns:eliminarAutorResponse" />
+  </message>
+  <message name="insetarDigital">
+    <part name="parameters" element="tns:insetarDigital" />
+  </message>
+  <message name="insetarDigitalResponse">
+    <part name="parameters" element="tns:insetarDigitalResponse" />
+  </message>
+  <message name="modificarDigital">
+    <part name="parameters" element="tns:modificarDigital" />
+  </message>
+  <message name="modificarDigitalResponse">
+    <part name="parameters" element="tns:modificarDigitalResponse" />
+  </message>
+  <message name="insertarLibro">
+    <part name="parameters" element="tns:insertarLibro" />
+  </message>
+  <message name="insertarLibroResponse">
+    <part name="parameters" element="tns:insertarLibroResponse" />
+  </message>
+  <message name="eliminarLibro">
+    <part name="parameters" element="tns:eliminarLibro" />
+  </message>
+  <message name="eliminarLibroResponse">
+    <part name="parameters" element="tns:eliminarLibroResponse" />
+  </message>
+  <message name="eliminarDigital">
+    <part name="parameters" element="tns:eliminarDigital" />
+  </message>
+  <message name="eliminarDigitalResponse">
+    <part name="parameters" element="tns:eliminarDigitalResponse" />
+  </message>
+  <message name="eliminarPrestamo">
+    <part name="parameters" element="tns:eliminarPrestamo" />
+  </message>
+  <message name="eliminarPrestamoResponse">
+    <part name="parameters" element="tns:eliminarPrestamoResponse" />
+  </message>
+  <portType name="LibraryWS">
+    <operation name="insertarBiblioteca">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarBibliotecaRequest" message="tns:insertarBiblioteca" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarBibliotecaResponse" message="tns:insertarBibliotecaResponse" />
+    </operation>
+    <operation name="listarAutoresPorNombre">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarAutoresPorNombreRequest" message="tns:listarAutoresPorNombre" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarAutoresPorNombreResponse" message="tns:listarAutoresPorNombreResponse" />
+    </operation>
+    <operation name="listarBibliotecasIdEncargado">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarBibliotecasIdEncargadoRequest" message="tns:listarBibliotecasIdEncargado" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarBibliotecasIdEncargadoResponse" message="tns:listarBibliotecasIdEncargadoResponse" />
+    </operation>
+    <operation name="listarLibrosTodos">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarLibrosTodosRequest" message="tns:listarLibrosTodos" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarLibrosTodosResponse" message="tns:listarLibrosTodosResponse" />
+    </operation>
+    <operation name="listarDigitalesTodos">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarDigitalesTodosRequest" message="tns:listarDigitalesTodos" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarDigitalesTodosResponse" message="tns:listarDigitalesTodosResponse" />
+    </operation>
+    <operation name="eliminarBiblioteca">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarBibliotecaRequest" message="tns:eliminarBiblioteca" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarBibliotecaResponse" message="tns:eliminarBibliotecaResponse" />
+    </operation>
+    <operation name="listarAutoresPorIdRecurso">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarAutoresPorIdRecursoRequest" message="tns:listarAutoresPorIdRecurso" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarAutoresPorIdRecursoResponse" message="tns:listarAutoresPorIdRecursoResponse" />
+    </operation>
+    <operation name="listarBibliotecasTodas">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarBibliotecasTodasRequest" message="tns:listarBibliotecasTodas" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarBibliotecasTodasResponse" message="tns:listarBibliotecasTodasResponse" />
+    </operation>
+    <operation name="listarPrestamosConFiltros">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarPrestamosConFiltrosRequest" message="tns:listarPrestamosConFiltros" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarPrestamosConFiltrosResponse" message="tns:listarPrestamosConFiltrosResponse" />
+    </operation>
+    <operation name="registrarRetiroPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarRetiroPrestamoRequest" message="tns:registrarRetiroPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarRetiroPrestamoResponse" message="tns:registrarRetiroPrestamoResponse" />
+    </operation>
+    <operation name="registrarDevolucionPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarDevolucionPrestamoRequest" message="tns:registrarDevolucionPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarDevolucionPrestamoResponse" message="tns:registrarDevolucionPrestamoResponse" />
+    </operation>
+    <operation name="listarPrestamosPorLibro">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarPrestamosPorLibroRequest" message="tns:listarPrestamosPorLibro" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarPrestamosPorLibroResponse" message="tns:listarPrestamosPorLibroResponse" />
+    </operation>
+    <operation name="registrarPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarPrestamoRequest" message="tns:registrarPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/registrarPrestamoResponse" message="tns:registrarPrestamoResponse" />
+    </operation>
+    <operation name="modificarBiblioteca">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarBibliotecaRequest" message="tns:modificarBiblioteca" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarBibliotecaResponse" message="tns:modificarBibliotecaResponse" />
+    </operation>
+    <operation name="modificarPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarPrestamoRequest" message="tns:modificarPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarPrestamoResponse" message="tns:modificarPrestamoResponse" />
+    </operation>
+    <operation name="listarRecursosPorTituloAutorConFiltros">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/listarRecursosPorTituloAutorConFiltrosRequest" message="tns:listarRecursosPorTituloAutorConFiltros" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/listarRecursosPorTituloAutorConFiltrosResponse" message="tns:listarRecursosPorTituloAutorConFiltrosResponse" />
+    </operation>
+    <operation name="modificarAutor">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarAutorRequest" message="tns:modificarAutor" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarAutorResponse" message="tns:modificarAutorResponse" />
+    </operation>
+    <operation name="modificarLibro">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarLibroRequest" message="tns:modificarLibro" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarLibroResponse" message="tns:modificarLibroResponse" />
+    </operation>
+    <operation name="anularPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/anularPrestamoRequest" message="tns:anularPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/anularPrestamoResponse" message="tns:anularPrestamoResponse" />
+    </operation>
+    <operation name="insertarAutor">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarAutorRequest" message="tns:insertarAutor" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarAutorResponse" message="tns:insertarAutorResponse" />
+    </operation>
+    <operation name="eliminarAutor">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarAutorRequest" message="tns:eliminarAutor" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarAutorResponse" message="tns:eliminarAutorResponse" />
+    </operation>
+    <operation name="insetarDigital">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/insetarDigitalRequest" message="tns:insetarDigital" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/insetarDigitalResponse" message="tns:insetarDigitalResponse" />
+    </operation>
+    <operation name="modificarDigital">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarDigitalRequest" message="tns:modificarDigital" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/modificarDigitalResponse" message="tns:modificarDigitalResponse" />
+    </operation>
+    <operation name="insertarLibro">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarLibroRequest" message="tns:insertarLibro" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/insertarLibroResponse" message="tns:insertarLibroResponse" />
+    </operation>
+    <operation name="eliminarLibro">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarLibroRequest" message="tns:eliminarLibro" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarLibroResponse" message="tns:eliminarLibroResponse" />
+    </operation>
+    <operation name="eliminarDigital">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarDigitalRequest" message="tns:eliminarDigital" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarDigitalResponse" message="tns:eliminarDigitalResponse" />
+    </operation>
+    <operation name="eliminarPrestamo">
+      <input wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarPrestamoRequest" message="tns:eliminarPrestamo" />
+      <output wsam:Action="http://webservices.web.ulearn/LibraryWS/eliminarPrestamoResponse" message="tns:eliminarPrestamoResponse" />
+    </operation>
+  </portType>
+  <binding name="LibraryWSPortBinding" type="tns:LibraryWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAutoresPorNombre">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBibliotecasIdEncargado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarLibrosTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarDigitalesTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAutoresPorIdRecurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarBibliotecasTodas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamosConFiltros">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarRetiroPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarDevolucionPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPrestamosPorLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarRecursosPorTituloAutorConFiltros">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="anularPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insetarDigital">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarDigital">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLibro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarDigital">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LibraryWS">
+    <port name="LibraryWSPort" binding="tns:LibraryWSPortBinding">
+      <soap:address location="http://localhost:8080/ULearnWS/LibraryWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices.web.ulearn/" targetNamespace="http://webservices.web.ulearn/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarEncargado" type="tns:actualizarEncargado" />
+  <xs:element name="actualizarEncargadoResponse" type="tns:actualizarEncargadoResponse" />
+  <xs:element name="buscarFotoPerfil" type="tns:buscarFotoPerfil" />
+  <xs:element name="buscarFotoPerfilResponse" type="tns:buscarFotoPerfilResponse" />
+  <xs:element name="eliminarAdministrador" type="tns:eliminarAdministrador" />
+  <xs:element name="eliminarAdministradorResponse" type="tns:eliminarAdministradorResponse" />
+  <xs:element name="eliminarEncargado" type="tns:eliminarEncargado" />
+  <xs:element name="eliminarEncargadoResponse" type="tns:eliminarEncargadoResponse" />
+  <xs:element name="hallarAdministradorPorId" type="tns:hallarAdministradorPorId" />
+  <xs:element name="hallarAdministradorPorIdResponse" type="tns:hallarAdministradorPorIdResponse" />
+  <xs:element name="hallarEncargadoPorId" type="tns:hallarEncargadoPorId" />
+  <xs:element name="hallarEncargadoPorIdResponse" type="tns:hallarEncargadoPorIdResponse" />
+  <xs:element name="iniciarSesion" type="tns:iniciarSesion" />
+  <xs:element name="iniciarSesionResponse" type="tns:iniciarSesionResponse" />
+  <xs:element name="insertarAdministrador" type="tns:insertarAdministrador" />
+  <xs:element name="insertarAdministradorResponse" type="tns:insertarAdministradorResponse" />
+  <xs:element name="insertarEncargado" type="tns:insertarEncargado" />
+  <xs:element name="insertarEncargadoResponse" type="tns:insertarEncargadoResponse" />
+  <xs:element name="listarEncargadosXUsuarioNombre" type="tns:listarEncargadosXUsuarioNombre" />
+  <xs:element name="listarEncargadosXUsuarioNombreResponse" type="tns:listarEncargadosXUsuarioNombreResponse" />
+  <xs:element name="listarTodosAdministradores" type="tns:listarTodosAdministradores" />
+  <xs:element name="listarTodosAdministradoresResponse" type="tns:listarTodosAdministradoresResponse" />
+  <xs:element name="listarTodosEncargados" type="tns:listarTodosEncargados" />
+  <xs:element name="listarTodosEncargadosResponse" type="tns:listarTodosEncargadosResponse" />
+  <xs:complexType name="eliminarAdministrador">
+    <xs:sequence>
+      <xs:element name="idAdministrador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEncargado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="encargado" type="tns:encargadoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="encargadoBiblioteca">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:empleado">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="titulo_trabajo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="empleado" abstract="true">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fechaContratacion" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="horaEntrada" type="xs:string" />
+          <xs:element minOccurs="0" name="horaSalida" type="xs:string" />
+          <xs:element name="idEmpleado" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="correoElectronico" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="foto" type="xs:base64Binary" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="salt" type="xs:string" />
+      <xs:element name="sexo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+      <xs:element name="tipoUsuario" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEncargadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="administrador" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="insertarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hallarAdministradorPorId">
+    <xs:sequence>
+      <xs:element name="idAdministrador" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hallarAdministradorPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarFotoPerfil">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarFotoPerfilResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEncargado">
+    <xs:sequence>
+      <xs:element name="idEncargado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEncargadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEncargado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="encargado" type="tns:encargadoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEncargadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEncargados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEncargadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encargadoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hallarEncargadoPorId">
+    <xs:sequence>
+      <xs:element name="idEncargado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hallarEncargadoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:encargadoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncargadosXUsuarioNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuarioNombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarEncargadosXUsuarioNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:encargadoBiblioteca" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosAdministradores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosAdministradoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="iniciarSesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="iniciarSesionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuarioSesion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarioSesion">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element name="tipoUsuario" type="xs:unsignedShort" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
