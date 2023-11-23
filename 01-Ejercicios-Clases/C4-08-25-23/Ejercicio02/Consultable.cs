@@ -1,3 +1,0 @@
-interface Consultable{
-	void imprimirDatos();
-}

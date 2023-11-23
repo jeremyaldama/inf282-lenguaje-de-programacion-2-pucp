@@ -1,3 +1,0 @@
-interface IComun{
-	void mostrarCodigoPUCP();
-}

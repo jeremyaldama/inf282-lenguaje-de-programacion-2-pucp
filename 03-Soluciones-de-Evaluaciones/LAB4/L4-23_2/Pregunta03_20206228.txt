@@ -1,0 +1,14 @@
+1. javac org/pucp/airsoft/companies/model/*.java
+2. jar -cvf airsoftCompanies.jar org/pucp/airsoft/companies/model/*.class
+	del /s org\pucp\airsoft\companies
+3. javac -cp airsoftCompanies.jar org/pucp/airsoft/engines/model/*.java
+4. jar -cvf airsoftEngines.jar org/pucp/airsoft/engines/model/*.class
+	del /s org\pucp\airsoft\engines
+5. javac -cp airsoftCompanies.jar;airsoftEngines.jar; org/pucp/airsoft/management/model/*.java
+6. jar -cvf airsoftManagement.jar org/pucp/airsoft/management/model/*.class
+	del /s org\pucp\airsoft\management\model
+7. javac -cp airsoftCompanies.jar;airsoftEngines.jar;airsoftManagement.jar; org/pucp/airsoft/program/main/*.java
+8. jar -cvfm airsoftPrincipal.jar MANIFEST.MF org/pucp/airsoft/program/main/*.class
+9. 
+	Main-Class: org/pucp/airsoft/program/main/Principal
+	Class-Path: airsoftCompanies.jar airsoftEngines.jar airsoftManagement.jar

@@ -1,7 +1,0 @@
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\bin\Debug\MiPrimeraAplicacion.exe.config
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\bin\Debug\MiPrimeraAplicacion.exe
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\bin\Debug\MiPrimeraAplicacion.pdb
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\obj\Debug\MiPrimeraAplicacion.csproj.AssemblyReference.cache
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\obj\Debug\MiPrimeraAplicacion.csproj.CoreCompileInputs.cache
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\obj\Debug\MiPrimeraAplicacion.exe
-C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases-2023_2\09-15-23\MiPrimeraAplicacion\MiPrimeraAplicacion\obj\Debug\MiPrimeraAplicacion.pdb

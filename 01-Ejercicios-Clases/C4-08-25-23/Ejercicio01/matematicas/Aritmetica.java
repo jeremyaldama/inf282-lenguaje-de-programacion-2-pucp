@@ -1,4 +1,0 @@
-package matematicas;
-class Aritmetica{
-
-}

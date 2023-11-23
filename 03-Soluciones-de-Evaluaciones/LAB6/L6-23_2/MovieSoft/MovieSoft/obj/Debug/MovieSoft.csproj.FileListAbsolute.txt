@@ -1,0 +1,54 @@
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.exe.config
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.exe
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.pdb
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftController.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftModel.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MySql.Data.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftDBManager.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\Google.Protobuf.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\BouncyCastle.Crypto.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\System.Memory.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\System.Numerics.Vectors.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\System.Buffers.dll
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftController.pdb
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftModel.pdb
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\bin\Debug\MovieSoftDBManager.pdb
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.AssemblyReference.cache
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.SuggestedBindingRedirects.cache
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.exe.config
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.frmBusquedaPeliculas.resources
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.frmGestionPeliculas.resources
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.Properties.Resources.resources
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.GenerateResource.cache
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.CoreCompileInputs.cache
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.CopyComplete
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.exe
+D:\Users\alulab14\Downloads\Laboratorio 06 - 2023 - 2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.AssemblyReference.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.SuggestedBindingRedirects.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.exe.config
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.exe
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.exe.config
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.exe
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoft.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftController.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftModel.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MySql.Data.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftDBManager.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\Google.Protobuf.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\System.Memory.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\System.Buffers.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftController.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftModel.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\bin\Debug\MovieSoftDBManager.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.frmBusquedaPeliculas.resources
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.frmGestionPeliculas.resources
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.Properties.Resources.resources
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.GenerateResource.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.CoreCompileInputs.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\03-Soluciones-de-Evaluaciones\LAB6\L6-23_2\MovieSoft\MovieSoft\obj\Debug\MovieSoft.csproj.CopyComplete

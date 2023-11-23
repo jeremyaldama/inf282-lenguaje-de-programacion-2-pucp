@@ -1,8 +1,0 @@
-Main-Class: principales/Principal
-Class-Path: matematicas.jar
-
-
-
-
-
-

@@ -1,0 +1,12 @@
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\bin\Debug\LP2SoftDBManager.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\bin\Debug\LP2SoftDBManager.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.csproj.AssemblyReference.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.csproj.CoreCompileInputs.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\01-Ejercicios-Clases\Procedures-Callable-Stm\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\bin\Debug\LP2SoftDBManager.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\bin\Debug\LP2SoftDBManager.pdb
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.csproj.AssemblyReference.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.csproj.CoreCompileInputs.cache
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.dll
+C:\Users\Danie\Desktop\Jeremy\01-PUCP\7mo Ciclo\01-Lenguaje-de-Programacion-2\04-Proyecto-LP2Soft\ProyectosNET\LP2Soft\LP2SoftDBManager\obj\Debug\LP2SoftDBManager.pdb
