@@ -1,3 +1,0 @@
-password: lp2-inf282-ulearn
-username: admin
-host: ulearn-final.cuv6drju1tkv.us-east-1.rds.amazonaws.com
